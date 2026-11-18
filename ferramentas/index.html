@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ferramentas financeiras e rurais gratuitas | Pauta Financeira</title>
+  <meta name="description" content="Calculadoras gratuitas de juros compostos, reserva de emergência, financiamento e custo de produção rural. Cálculos feitos no seu navegador.">
+  <link rel="canonical" href="https://www.pautafinanceira.com.br/ferramentas/">
+  <link rel="stylesheet" href="/styles.css">
+  <meta name="theme-color" content="#065F46">
+</head>
+<body>
+
+<header>
+  <div class="w">
+    <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
+      <span>Pauta <b>Financeira</b></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+    <nav class="principal" aria-label="Principal">
+      <a href="/">Início</a>
+      <a href="/financas/">Finanças</a>
+      <a href="/agronegocio/">Agronegócio</a>
+      <a href="/ferramentas/" aria-current="page">Ferramentas</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w">
+  <h1 style="margin-top:36px">Ferramentas gratuitas</h1>
+  <p style="max-width:760px">As contas são feitas no seu próprio navegador e nenhum dado é enviado a servidores. Os resultados são estimativas para planejamento e não substituem a análise de um profissional habilitado.</p>
+
+  <section id="juros" class="calc">
+    <h2>Juros compostos com aportes mensais</h2>
+    <form id="form-juros">
+      <div class="campos">
+        <div><label for="jc-inicial">Valor inicial (R$)</label><input id="jc-inicial" type="number" min="0" step="0.01" value="1000"></div>
+        <div><label for="jc-mensal">Aporte mensal (R$)</label><input id="jc-mensal" type="number" min="0" step="0.01" value="200"></div>
+        <div><label for="jc-taxa">Taxa anual esperada (%)</label><input id="jc-taxa" type="number" min="0" step="0.01" value="10"></div>
+        <div><label for="jc-meses">Prazo (meses)</label><input id="jc-meses" type="number" min="1" step="1" value="120"></div>
+      </div>
+      <button class="acao" type="submit">Calcular</button>
+    </form>
+    <div id="res-juros" class="resultado" aria-live="polite"></div>
+  </section>
+
+  <section id="reserva" class="calc">
+    <h2>Meta da reserva de emergência</h2>
+    <form id="form-reserva">
+      <div class="campos">
+        <div><label for="re-gastos">Despesas essenciais por mês (R$)</label><input id="re-gastos" type="number" min="0" step="0.01" value="3000"></div>
+        <div><label for="re-meses">Meses de cobertura desejados</label><input id="re-meses" type="number" min="1" step="1" value="6"></div>
+        <div><label for="re-aporte">Quanto consegue guardar por mês (R$)</label><input id="re-aporte" type="number" min="0" step="0.01" value="500"></div>
+      </div>
+      <button class="acao" type="submit">Calcular meta</button>
+    </form>
+    <div id="res-reserva" class="resultado" aria-live="polite"></div>
+  </section>
+
+  <section id="financiamento" class="calc">
+    <h2>Parcelas de financiamento (sistema de parcelas fixas)</h2>
+    <form id="form-financiamento">
+      <div class="campos">
+        <div><label for="fi-valor">Valor financiado (R$)</label><input id="fi-valor" type="number" min="0" step="0.01" value="20000"></div>
+        <div><label for="fi-taxa">Taxa de juros mensal (%)</label><input id="fi-taxa" type="number" min="0" step="0.01" value="1.5"></div>
+        <div><label for="fi-meses">Prazo (meses)</label><input id="fi-meses" type="number" min="1" step="1" value="48"></div>
+      </div>
+      <button class="acao" type="submit">Calcular parcela</button>
+    </form>
+    <div id="res-financiamento" class="resultado" aria-live="polite"></div>
+    <p class="ajuda">Use a taxa informada no contrato ou na simulação do banco. Taxas de exemplo não representam ofertas de crédito.</p>
+  </section>
+
+  <section id="custo-rural" class="calc">
+    <h2>Custo de produção por unidade (agronegócio)</h2>
+    <form id="form-custo-rural">
+      <div class="campos">
+        <div><label for="ag-area">Área plantada (hectares)</label><input id="ag-area" type="number" min="0" step="0.01" value="100"></div>
+        <div><label for="ag-fixo">Custos fixos totais da safra (R$)</label><input id="ag-fixo" type="number" min="0" step="0.01" value="150000"></div>
+        <div><label for="ag-variavel">Custos variáveis por hectare (R$/ha)</label><input id="ag-variavel" type="number" min="0" step="0.01" value="2000"></div>
+        <div><label for="ag-prod">Produtividade (unidades por hectare)</label><input id="ag-prod" type="number" min="0" step="0.01" value="60"></div>
+        <div><label for="ag-preco">Preço de venda por unidade (R$, opcional)</label><input id="ag-preco" type="number" min="0" step="0.01" value="90"></div>
+      </div>
+      <button class="acao" type="submit">Calcular custo</button>
+    </form>
+    <div id="res-custo-rural" class="resultado" aria-live="polite"></div>
+    <p class="ajuda">Os valores de exemplo são hipotéticos. Substitua pelos custos e preços da sua propriedade.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 Pauta Financeira. Conteúdo educativo; não constitui recomendação de investimento, compra ou venda de ativos.</p>
+    <p>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/termos/">Termos e aviso financeiro</a>
+      <a href="/contato/">Contato</a>
+      <a href="#" id="pf-cookies">Gerenciar cookies</a>
+    </p>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookies" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos armazenamento local para lembrar a sua escolha. Saiba mais na <a href="/privacidade/" style="color:#fff">Política de Privacidade</a>.</p>
+  <button id="cookie-aceitar" class="ok">Aceitar</button>
+  <button id="cookie-recusar" class="nao">Recusar</button>
+</div>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
