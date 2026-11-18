@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Safra e Financiamento Rural: Guia Completo e Simulador</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f6f0; }
+        h1, h2 { color: #2e7d32; }
+        .container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .calculator { background: #e8f5e9; padding: 20px; border-radius: 6px; margin-top: 25px; border: 1px solid #c8e6c9; }
+        input, select { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #a5d6a7; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #388e3c; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { background-color: #2e7d32; }
+        .result { margin-top: 15px; font-weight: bold; color: #1b5e20; line-height: 1.6; }
+        blockquote { background: #f1f8e9; border-left: 4px solid #388e3c; margin: 20px 0; padding: 10px 15px; color: #33691e; }
+        ul { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Plano Safra e Financiamento Rural: Como Funciona o Crédito para o Produtor</h1>
+        <p>O <strong>Plano Safra</strong> é o principal instrumento de apoio financeiro do governo federal à agropecuária brasileira. Por meio de linhas de crédito com taxas de juros controladas, o programa viabiliza o custeio da produção, a comercialização e os investimentos em infraestrutura e inovação nas propriedades rurais.</p>
+        
+        <p>Segundo diretrizes oficiais do Banco Central do Brasil e do Ministério da Agricultura e Pecuária (MAPA), entender os critérios do Manual de Crédito Rural (MCR) é essencial para garantir o acesso a recursos subsidiados e evitar custos financeiros desnecessários.</p>
+
+        <h2>Principais Linhas de Crédito do Plano Safra</h2>
+        <p>Os recursos do crédito rural são divididos de acordo com a finalidade e o perfil do produtor (como a agricultura familiar através do Pronaf ou a agricultura empresarial):</p>
+
+        <h3>1. Crédito de Custeio</h3>
+        <ul>
+            <li><strong>Finalidade:</strong> Financiar os gastos normais dos ciclos produtivos, como compra de sementes, adubos, defensivos agrícolas, combustíveis e pagamento de mão de obra temporária.</li>
+            <li><strong>Prazo:</strong> Geralmente vinculado ao ciclo da cultura (curto prazo, de até 1 ou 2 anos).</li>
+        </ul>
+
+        <h3>2. Crédito de Investimento</h3>
+        <ul>
+            <li><strong>Finalidade:</strong> Aquisição de bens e serviços de maior durabilidade, como tratores, colheitadeiras, construção de armazéns, correção de solo e implantação de cercas ou irrigação.</li>
+            <li><strong>Prazo:</strong> Médio e longo prazo (podendo chegar a vários anos, com carência).</li>
+        </ul>
+
+        <blockquote>
+            💡 <strong>Fonte Oficial de Consulta:</strong> Para verificar as taxas de juros atualizadas, limites de faturamento e resoluções vigentes, consulte sempre o <strong>Manual de Crédito Rural (MCR)</strong> no site oficial do <strong>Banco Central do Brasil</strong> (<code>bcb.gov.br</code>).
+        </blockquote>
+
+        <h2>Simule o Custo de um Financiamento Agrícola</h2>
+        <div class="calculator">
+            <h3 style="color: #2e7d32; margin-top: 0;">Simulador de Custeio e Investimento Rural</h3>
+            
+            <label for="valorFinanciado">Valor do Financiamento (R$):</label>
+            <input type="number" id="valorFinanciado" placeholder="Ex: 150000">
+
+            <label for="taxaJurosAnual">Taxa de Juros Anual do Programa (% a.a.):</label>
+            <input type="number" id="taxaJurosAnual" value="8.5" placeholder="Ex: 8.5">
+
+            <label for="anosPagamento">Prazo de Pagamento (Anos):</label>
+            <input type="number" id="anosPagamento" value="3">
+
+            <button onclick="calcularFinanciamentoRural()">Calcular Custo Total</button>
+
+            <div class="result" id="resultadoRural"></div>
+        </div>
+
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <ul>
+            <li><strong>Qualquer produtor pode acessar o Plano Safra?</strong> Sim, desde que atenda aos requisitos de regularidade ambiental, fiscal e financeira exigidos pelas instituições financeiras credenciadas.</li>
+            <li><strong>Onde solicitar o crédito?</strong> Diretamente nas agências bancárias autorizadas a operar com crédito rural (bancos públicos e privados participantes do sistema).</li>
+        </ul>
+    </div>
+
+    <script>
+        function calcularFinanciamentoRural() {
+            const vp = parseFloat(document.getElementById('valorFinanciado').value) || 0;
+            const taxaAnual = parseFloat(document.getElementById('taxaJurosAnual').value) || 0;
+            const anos = parseInt(document.getElementById('anosPagamento').value) || 0;
+            const divResultado = document.getElementById('resultadoRural');
+
+            if (vp <= 0 || anos <= 0) {
+                divResultado.innerHTML = "Por favor, insira valores válidos para o financiamento e prazo.";
+                return;
+            }
+
+            // Cálculo simplificado de juros compostos para financiamento (Tabela Price básica)
+            const i = taxaAnual / 100;
+            const montanteTotal = vp * Math.pow(1 + i, anos);
+            const jurosTotais = montanteTotal - vp;
+            const parcelaAnual = montanteTotal / anos;
+
+            divResultado.innerHTML = `Montante Total a Pagar ao Final: R$ ${montanteTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Custo Total de Juros: R$ ${jurosTotais.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Parcela Média Anual Estimada: R$ ${parcelaAnual.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        }
+    </script>
+</body>
+</html>
