@@ -5,25 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva de Emergência: O Guia Completo e Calculadora</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
-        h1, h2 { color: #004d40; }
-        .container { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .calculator { background: #e0f2f1; padding: 20px; border-radius: 6px; margin-top: 20px; }
-        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        button { background-color: #00796b; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        body { font-family: Arial, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        h1, h2, h3 { color: #004d40; }
+        .container { background: #fff; padding: 35px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .calculator { background: #e0f2f1; padding: 25px; border-radius: 6px; margin-top: 25px; border: 1px solid #b2dfdb; }
+        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #80cbc4; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #00796b; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
         button:hover { background-color: #004d40; }
-        .result { margin-top: 15px; font-weight: bold; color: #004d40; }
+        .result { margin-top: 20px; font-weight: bold; color: #004d40; line-height: 1.6; font-size: 1.1em; }
+        blockquote { background: #f1f8e9; border-left: 4px solid #00796b; margin: 20px 0; padding: 12px 18px; color: #004d40; }
+        ul { margin-bottom: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Reserva de Emergência: Quanto você realmente precisa?</h1>
-        <p>A reserva de emergência é o primeiro passo para qualquer planejamento financeiro saudável. Ela serve para cobrir imprevistos como desemprego, problemas de saúde ou consertos urgentes.</p>
+        <h1>Reserva de Emergência: Quanto Você Realmente Precisa?</h1>
+        <p>A <strong>reserva de emergência</strong> é o alicerce de qualquer planejamento financeiro saudável. Mais do que guardar dinheiro, ela representa a sua segurança e tranquilidade diante de imprevistos inevitáveis da vida, como a perda repentina de emprego, problemas de saúde ou reparos urgentes na casa e no carro.</p>
         
-        <h2>Calculadora de Reserva de Emergência</h2>
+        <p>Segundo orientações de educadores financeiros e dados de órgãos de proteção ao crédito, começar a investir sem antes formar essa base é um risco que pode levar ao endividamento rápido em caso de crises.</p>
+
+        <h2>Por que a Reserva de Emergência é Indispensável?</h2>
+        <p>Muitas pessoas confundem investimentos de longo prazo (como ações ou previdência) com o dinheiro guardado para o curto prazo. A reserva precisa atender a três critérios fundamentais:</p>
+        <ul>
+            <li><strong>Alta Liquidez:</strong> O dinheiro precisa estar disponível para resgate imediato (em dias úteis ou até mesmo finais de semana, dependendo da aplicação).</li>
+            <li><strong>Baixo Risco:</strong> Não pode estar exposta a oscilações fortes de mercado (como a bolsa de valores). O ideal são investimentos de renda fixa com garantia ou alta segurança, como o Tesouro Selic ou CDBs com liquidez diária.</li>
+            <li><strong>Foco Exclusivo em Imprevistos:</strong> Esse montante não deve ser usado para viagens, compras de Natal ou trocas de celular, mas estritamente para emergências reais.</li>
+        </ul>
+
+        <h2>De Quantos Meses Deve Ser a Sua Reserva?</h2>
+        <p>O padrão recomendado varia de acordo com a estabilidade da sua fonte de renda:</p>
+        <ul>
+            <li><strong>6 meses de custo de vida:</strong> O padrão mais recomendado para CLT com boa estabilidade.</li>
+            <li><strong>9 a 12 meses de custo de vida:</strong> Essencial para profissionais autônomos, liberais, freelancers e empresários, cuja renda mensal oscila bastante.</li>
+        </ul>
+
+        <blockquote>
+            💡 <strong>Dica de Ouro:</strong> Para calcular o seu custo de vida mensal, leve em conta apenas os gastos essenciais para manter sua sobrevivência com dignidade (moradia, alimentação, saúde, contas básicas e transporte), desconsiderando supérfluos temporariamente em caso de crise.
+        </blockquote>
+
+        <h2>Simule o Tamanho Ideal da Sua Reserva</h2>
         <div class="calculator">
-            <label for="custo">Seu custo de vida mensal (R$):</label>
-            <input type="number" id="custo" placeholder="Ex: 3000">
+            <h3 style="color: #004d40; margin-top: 0;">Calculadora de Reserva de Emergência</h3>
+            
+            <label for="custo">Seu custo de vida mensal essencial (R$):</label>
+            <input type="number" id="custo" placeholder="Ex: 3500">
 
             <label for="meses">Quantos meses de segurança você quer guardar?</label>
             <input type="number" id="meses" value="6">
@@ -32,6 +57,12 @@
 
             <div class="result" id="resultado"></div>
         </div>
+
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <ul>
+            <li><strong>Onde devo deixar guardado o dinheiro da reserva?</strong> Em aplicações seguras com liquidez diária, como o Tesouro Selic ou contas de pagamento regulamentadas que rendem 100% do CDI.</li>
+            <li><strong>Posso investir a reserva em ações?</strong> De jeito nenhum. Ações têm volatilidade e você pode ser obrigado a resgatar no prejuízo se a emergência acontecer em um momento de queda da bolsa.</li>
+        </ul>
     </div>
 
     <script>
