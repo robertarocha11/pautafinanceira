@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pauta Financeira: finanças pessoais e agronegócio com método</title>
+  <meta name="description" content="Guias claros sobre finanças pessoais, investimentos e gestão rural, com exemplos práticos, calculadoras gratuitas e fontes oficiais.">
+  <link rel="canonical" href="https://www.pautafinanceira.com.br/">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:title" content="Pauta Financeira">
+  <meta property="og:description" content="Educação financeira para a cidade e para o campo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.pautafinanceira.com.br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="theme-color" content="#065F46">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "Pauta Financeira",
+        "url": "https://www.pautafinanceira.com.br/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Pauta Financeira",
+        "url": "https://www.pautafinanceira.com.br/",
+        "email": "contato@pautafinanceira.com.br"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Biblioteca de ícones vetoriais reutilizáveis (usados com <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-cofrinho" viewBox="0 0 24 24">
+      <ellipse cx="11" cy="13" rx="7.5" ry="5.5"/>
+      <path d="M8 8.2V6.5h3.5"/>
+      <path d="M6.2 16.5V19M15.2 16.5V19"/>
+      <path d="M18.5 12.2l2-.6v1.8l-2 .6"/>
+    </symbol>
+    <symbol id="i-grafico" viewBox="0 0 24 24">
+      <path d="M3 17l5.5-5.5 4 4L21 7"/>
+      <path d="M15 7h6v6"/>
+    </symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24">
+      <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="i-calculadora" viewBox="0 0 24 24">
+      <rect x="5" y="3" width="14" height="18" rx="2.5"/>
+      <path d="M8.5 7.5h7"/>
+      <path d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 15.5h.01M12 15.5h.01M15.5 15.5h.01"/>
+    </symbol>
+    <symbol id="i-trigo" viewBox="0 0 24 24">
+      <path d="M12 3v18"/>
+      <path d="M12 7.5c-1.8 0-2.8 1-2.8 2.8 1.8 0 2.8-1 2.8-2.8z"/>
+      <path d="M12 7.5c1.8 0 2.8 1 2.8 2.8-1.8 0-2.8-1-2.8-2.8z"/>
+      <path d="M12 12.5c-1.8 0-2.8 1-2.8 2.8 1.8 0 2.8-1 2.8-2.8z"/>
+      <path d="M12 12.5c1.8 0 2.8 1 2.8 2.8-1.8 0-2.8-1-2.8-2.8z"/>
+    </symbol>
+    <symbol id="i-planta" viewBox="0 0 24 24">
+      <path d="M12 21v-9"/>
+      <path d="M12 12c0-4 2.6-6.2 6.5-6.2 0 4-2.6 6.2-6.5 6.2z"/>
+      <path d="M12 15c0-3.2-2.1-5.2-5.3-5.2 0 3.2 2.1 5.2 5.3 5.2z"/>
+      <path d="M7 21h10"/>
+    </symbol>
+    <symbol id="i-carteira" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="13" rx="2.5"/>
+      <path d="M3 9.5h15"/>
+      <path d="M16 13.5h2"/>
+    </symbol>
+    <symbol id="i-campo" viewBox="0 0 24 24">
+      <circle cx="12" cy="9" r="3.5"/>
+      <path d="M3 20h18"/>
+      <path d="M3 16.5c3-1.5 6 1.5 9 0s6 1.5 9 0"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="w">
+    <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
+      <svg viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
+        <rect width="48" height="48" rx="13" fill="#065F46"/>
+        <rect x="9" y="28" width="6" height="9" rx="1.5" fill="#D1FAE5"/>
+        <rect x="19" y="22" width="6" height="15" rx="1.5" fill="#A7F3D0"/>
+        <rect x="29" y="16" width="6" height="21" rx="1.5" fill="#ECFDF5"/>
+        <path d="M7 24.5L17 17l5 3.5L36 9" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M29 9h7v7" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M37 37c-3.5 0-5.5-2-5.5-5.5 3.5 0 5.5 2 5.5 5.5z" fill="#34D399"/>
+      </svg>
+      <span class="logo-texto">Pauta <b>Financeira</b></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="principal" id="menu-principal" aria-label="Principal">
+      <a href="/" aria-current="page">Início</a>
+      <a href="/financas/">Finanças</a>
+      <a href="/agronegocio/">Agronegócio</a>
+      <a href="/ferramentas/">Ferramentas</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="w">
+      <div>
+        <span class="hero-selo"><i></i>Educação financeira para a cidade e para o campo</span>
+        <h1>Dinheiro bem organizado, na cidade e no campo.</h1>
+        <p class="lead">Guias com exemplos calculados, fontes oficiais e data de atualização em cada texto. Sem promessas de ganho rápido, com ferramentas gratuitas para você testar os seus próprios números.</p>
+        <div class="hero-acoes">
+          <a class="btn" href="/ferramentas/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-calculadora"/></svg>
+            Abrir calculadoras
+          </a>
+          <a class="btn sec" href="/financas/">Ver guias de finanças</a>
+        </div>
+        <div class="hero-indicadores">
+          <div><strong>4</strong>calculadoras de finanças</div>
+          <div><strong>1</strong>calculadora para o agronegócio</div>
+          <div><strong>100%</strong>conteúdo educativo, sem recomendação de ativos</div>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 360" fill="none">
+          <rect x="30" y="250" width="50" height="70" rx="8" fill="rgba(255,255,255,0.14)"/>
+          <rect x="100" y="210" width="50" height="110" rx="8" fill="rgba(255,255,255,0.22)"/>
+          <rect x="170" y="165" width="50" height="155" rx="8" fill="rgba(255,255,255,0.32)"/>
+          <rect x="240" y="120" width="50" height="200" rx="8" fill="#FBBF24"/>
+          <path d="M40 215 L120 170 L190 190 L280 110 L360 60" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 12"/>
+          <path d="M320 60 H360 V100" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="360" cy="60" r="10" fill="#FBBF24"/>
+          <path d="M330 320 c-20 0-34-14-34-34 26 0 34 14 34 34z" fill="#34D399" opacity="0.9"/>
+          <path d="M330 320 V270" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
+          <path d="M60 320 H340" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="w">
+    <h2 class="secao">Leituras em destaque</h2>
+    <p class="secao-sub">Textos com exemplos calculados, passo a passo e referências a fontes oficiais.</p>
+    <div class="grid">
+      <a class="card" href="/financas/reserva-de-emergencia/">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-escudo"/></svg></span>
+        <span class="cat">Finanças pessoais</span>
+        <h3>Reserva de emergência: quanto guardar e onde deixar</h3>
+        <p>Como calcular a sua meta com base nas despesas essenciais e escolher onde guardar com liquidez.</p>
+        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 6 min de leitura</span>
+      </a>
+      <a class="card" href="/financas/juros-compostos/">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grafico"/></svg></span>
+        <span class="cat">Finanças pessoais</span>
+        <h3>Juros compostos na prática: por que o tempo importa tanto</h3>
+        <p>Exemplos com valores reais de aporte e prazo, mostrando o efeito dos juros sobre juros a favor e contra o seu bolso.</p>
+        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
+      </a>
+      <a class="card rural" href="/agronegocio/custo-producao-rural/">
+        <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-trigo"/></svg></span>
+        <span class="cat">Agronegócio</span>
+        <h3>Custo de produção rural: como calcular e o que ele revela</h3>
+        <p>Diferença entre custos fixos e variáveis, cálculo do custo por unidade e do preço mínimo de equilíbrio.</p>
+        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
+      </a>
+    </div>
+
+    <h2 class="secao">Ferramentas gratuitas</h2>
+    <p class="secao-sub">Os cálculos são feitos no seu navegador. Nenhum dado digitado é enviado a servidores.</p>
+    <div class="grid">
+      <a class="card" href="/ferramentas/#juros">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cofrinho"/></svg></span>
+        <span class="cat">Calculadora</span>
+        <h3>Juros compostos com aportes mensais</h3>
+        <p>Simule quanto um aporte regular pode render ao longo do tempo, sem considerar impostos.</p>
+        <span class="acesso">Abrir ferramenta →</span>
+      </a>
+      <a class="card" href="/ferramentas/#reserva">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-escudo"/></svg></span>
+        <span class="cat">Calculadora</span>
+        <h3>Meta da reserva de emergência</h3>
+        <p>Descubra o valor ideal da sua reserva e quantos meses leva para alcançá-lo.</p>
+        <span class="acesso">Abrir ferramenta →</span>
+      </a>
+      <a class="card rural" href="/ferramentas/#rural">
+        <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-planta"/></svg></span>
+        <span class="cat">Calculadora rural</span>
+        <h3>Custo por saca ou por unidade</h3>
+        <p>Calcule o custo de produção por unidade e a receita estimada para uma área plantada.</p>
+        <span class="acesso">Abrir ferramenta →</span>
+      </a>
+    </div>
+
+    <h2 class="secao">Explore por tema</h2>
+    <div class="grid">
+      <a class="card" href="/financas/">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-carteira"/></svg></span>
+        <span class="cat">Categoria</span>
+        <h3>Finanças pessoais</h3>
+        <p>Orçamento, reserva, juros, investimentos e planejamento para o dia a dia.</p>
+        <span class="acesso">Ver todos os guias →</span>
+      </a>
+      <a class="card rural" href="/agronegocio/">
+        <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-campo"/></svg></span>
+        <span class="cat">Categoria</span>
+        <h3>Agronegócio</h3>
+        <p>Custos, fluxo de caixa, crédito rural e gestão de risco para quem produz.</p>
+        <span class="acesso">Ver todos os guias →</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 Pauta Financeira. Conteúdo educativo; não constitui recomendação de investimento, compra ou venda de ativos.</p>
+    <p>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/termos/">Termos e aviso financeiro</a>
+      <a href="/contato/">Contato</a>
+      <a href="#" id="pf-cookies">Gerenciar cookies</a>
+    </p>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookies" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos armazenamento local para lembrar a sua escolha. Se houver anúncios ou ferramentas de terceiros no futuro, eles só serão carregados conforme a sua escolha. Saiba mais na <a href="/privacidade/">Política de Privacidade</a>.</p>
+  <button id="cookie-aceitar" class="ok">Aceitar</button>
+  <button id="cookie-recusar" class="nao">Recusar</button>
+</div>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
