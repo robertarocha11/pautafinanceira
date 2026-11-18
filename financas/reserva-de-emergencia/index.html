@@ -7,16 +7,17 @@
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: 0 auto; padding: 0 0 40px 0; background-color: #f9f9f9; }
         
-        /* Cabeçalho exato do site */
+        /* Cabeçalho exato com a identidade visual padrão */
         header { background-color: #ffffff; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea; margin-bottom: 30px; }
         .logo-area { display: flex; align-items: center; text-decoration: none; }
-        .logo-icon { width: 36px; height: 36px; background-color: #00796b; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin-right: 10px; font-size: 18px; }
-        .logo-text { font-size: 22px; font-weight: bold; color: #004d40; }
-        nav { display: flex; gap: 20px; }
+        .logo-img { height: 38px; width: auto; margin-right: 12px; }
+        .logo-text { font-size: 22px; font-weight: bold; color: #1a1a1a; }
+        
+        nav { display: flex; gap: 25px; align-items: center; }
         nav a { color: #333; text-decoration: none; font-size: 15px; font-weight: 500; padding-bottom: 4px; }
-        nav a:hover, nav a.active { color: #00796b; border-bottom: 2px solid #00796b; }
+        nav a:hover, nav a.active { color: #d35400; border-bottom: 2px solid #d35400; }
 
-        /* Container do Artigo no formato Card */
+        /* Container do Artigo no Formato Card */
         .container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 0 20px; border: 1px solid #eaeaea; }
         
         .meta-info { font-size: 13px; color: #666; margin-bottom: 15px; }
@@ -35,10 +36,10 @@
 </head>
 <body>
 
-    <!-- Cabeçalho Oficial do Pauta Financeira -->
+    <!-- Cabeçalho idêntico ao modelo funcional do site -->
     <header>
         <a href="https://www.pautafinanceira.com.br/" class="logo-area">
-            <div class="logo-icon">📈</div>
+            <img src="https://www.pautafinanceira.com.br/assets/logo.png" alt="Pauta Financeira" class="logo-img" onerror="this.style.display='none'">
             <span class="logo-text">Pauta Financeira</span>
         </a>
         <nav>
