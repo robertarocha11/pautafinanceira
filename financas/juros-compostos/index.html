@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros Compostos: Como o tempo trabalha a seu favor</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        h1, h2 { color: #1a237e; }
+        .container { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .calculator { background: #e8eaf6; padding: 20px; border-radius: 6px; margin-top: 20px; }
+        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #3f51b5; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #303f9f; }
+        .result { margin-top: 15px; font-weight: bold; color: #1a237e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>O Poder dos Juros Compostos nos Seus Investimentos</h1>
+        <p>Os juros compostos são conhecidos como a oitava maravilha do mundo. Neles, os juros de cada período rendem sobre o montante total acumulado, acelerando o crescimento do seu patrimônio.</p>
+        
+        <h2>Simulador de Juros Compostos</h2>
+        <div class="calculator">
+            <label for="capital">Valor Inicial (R$):</label>
+            <input type="number" id="capital" placeholder="Ex: 1000">
+
+            <label for="aporte">Aporte Mensal (R$):</label>
+            <input type="number" id="aporte" placeholder="Ex: 200">
+
+            <label for="taxa">Taxa de juros anual (%):</label>
+            <input type="number" id="taxa" placeholder="Ex: 10">
+
+            <label for="anos">Tempo (anos):</label>
+            <input type="number" id="anos" placeholder="Ex: 5">
+
+            <button onclick="calcularJuros()">Simular Crescimento</button>
+
+            <div class="result" id="resultado"></div>
+        </div>
+    </div>
+
+    <script>
+        function calcularJuros() {
+            const P = parseFloat(document.getElementById('capital').value) || 0;
+            const PMT = parseFloat(document.getElementById('aporte').value) || 0;
+            const taxaAnual = parseFloat(document.getElementById('taxa').value) || 0;
+            const anos = parseInt(document.getElementById('anos').value) || 0;
+            const resultado = document.getElementById('resultado');
+
+            if (anos <= 0 || taxaAnual <= 0) {
+                resultado.innerHTML = "Por favor, insira prazos e taxas válidos.";
+                return;
+            }
+
+            const i = (taxaAnual / 100) / 12;
+            const n = anos * 12;
+            
+            let montante = P * Math.pow(1 + i, n);
+            for (let t = 1; t <= n; t++) {
+                montante += PMT * Math.pow(1 + i, n - t);
+            }
+
+            const totalInvestido = P + (PMT * n);
+            const jurosAcumulados = montante - totalInvestido;
+
+            resultado.innerHTML = `Valor Total Final: R$ ${montante.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Total Investido: R$ ${totalInvestido.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Rendimento em Juros: R$ ${jurosAcumulados.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        }
+    </script>
+</body>
+</html>
