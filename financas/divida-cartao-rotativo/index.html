@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cartão de crédito rotativo: como o juro cresce e como sair dele | Pauta Financeira</title>
-  <meta name="description" content="Como o rotativo do cartão cobra juros compostos, com tabela mês a mês de uma dívida hipotética, comparação com empréstimo pessoal e plano prático de 90 dias.">
-  <link rel="canonical" href="https://www.pautafinanceira.com.br/financas/divida-cartao-rotativo/">
-  <link rel="stylesheet" href="/styles.css">
-  <meta name="theme-color" content="#065F46">
-  <meta property="og:title" content="Cartão de crédito rotativo: como o juro cresce e como sair dele">
-  <meta property="og:description" content="Tabela mês a mês, comparação de alternativas e plano prático para sair do rotativo.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://www.pautafinanceira.com.br/financas/divida-cartao-rotativo/">
-  <meta property="og:locale" content="pt_BR">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Cartão de crédito rotativo: como o juro cresce e como sair dele",
-    "datePublished": "2026-11-18",
-    "dateModified": "2026-11-18",
-    "author": { "@type": "Organization", "name": "Redação Pauta Financeira" },
-    "publisher": { "@type": "Organization", "name": "Pauta Financeira" },
-    "mainEntityOfPage": "https://www.pautafinanceira.com.br/financ
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dívida do Cartão Rotativo: Como sair dessa armadilha</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fcf4f4; }
+        h1, h2 { color: #c62828; }
+        .container { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .calculator { background: #ffebee; padding: 20px; border-radius: 6px; margin-top: 20px; }
+        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #d32f2f; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #b71c1c; }
+        .result { margin-top: 15px; font-weight: bold; color: #b71c1c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>O Perigo do Cartão Rotativo e Como Quitar sua Dívida</h1>
+        <p>O crédito rotativo do cartão é uma das linhas de juros mais altas do mercado financeiro. Pagar apenas o "mínimo" da fatura faz a dívida se multiplicar rapidamente em poucos meses.</p>
+        
+        <h2>Simulador de Crescimento da Dívida (Rotativo)</h2>
+        <div class="calculator">
+            <label for="divida">Valor da Dívida Atual (R$):</label>
+            <input type="number" id="divida" placeholder="Ex: 2000">
+
+            <label for="juros">Taxa de Juros Mensal Média (% ao mês):</label>
+            <input type="number" id="juros" value="14" placeholder="Ex: 14">
+
+            <label for="meses">Quantos meses sem pagar o total:</label>
+            <input type="number" id="meses" value="3">
+
+            <button onclick="calcularRotativo()">Calcular Dívida Acumulada</button>
+
+            <div class="result" id="resultado"></div>
+        </div>
+    </div>
+
+    <script>
+        function calcularRotativo() {
+            const divida = parseFloat(document.getElementById('divida').value) || 0;
+            const taxaMensal = parseFloat(document.getElementById('juros').value) || 0;
+            const meses = parseInt(document.getElementById('meses').value) || 0;
+            const resultado = document.getElementById('resultado');
+
+            if (divida <= 0 || meses <= 0) {
+                resultado.innerHTML = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            const i = taxaMensal / 100;
+            const montante = divida * Math.pow(1 + i, meses);
+            const jurosAcumulados = montante - divida;
+
+            resultado.innerHTML = `Valor da Dívida após ${meses} meses: R$ ${montante.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Somente de Juros Acumulados: R$ ${jurosAcumulados.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        }
+    </script>
+</body>
+</html>
