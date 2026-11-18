@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renegociação de Dívidas: Como Limpar o Nome e Reduzir Juros</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fcf4f4; }
+        h1, h2 { color: #c62828; }
+        .container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .calculator { background: #ffebee; padding: 20px; border-radius: 6px; margin-top: 25px; border: 1px solid #ffcdd2; }
+        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ef9a9a; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #d32f2f; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { background-color: #b71c1c; }
+        .result { margin-top: 15px; font-weight: bold; color: #b71c1c; line-height: 1.6; }
+        blockquote { background: #ffebee; border-left: 4px solid #d32f2f; margin: 20px 0; padding: 10px 15px; color: #b71c1c; }
+        ul { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Como Renegociar Dívidas e Sair do Vermelho com Segurança Legal</h1>
+        <p>Lidar com o endividamento e os juros compostos cobrados no rotativo do cartão ou em empréstimos atrasados é um dos maiores desafios financeiros das famílias brasileiras. Conhecer os seus direitos e as ferramentas oficiais de acordo é o primeiro passo para recuperar a saúde financeira.</p>
+        
+        <p>Segundo orientações do Banco Central do Brasil e do Ministério da Justiça e Segurança Pública (através de plataformas como o Consumidor.gov.br), o consumidor tem o direito garantido de negociar débitos de forma transparente, exigindo o abatimento de encargos abusivos.</p>
+
+        <h2>Estratégias Eficientes para Limpar o Nome</h2>
+        <p>Antes de fechar qualquer acordo de renegociação, vale a pena seguir algumas diretrizes essenciais:</p>
+
+        <h3>1. Utilize Plataformas Oficiais de Acordo</h3>
+        <ul>
+            <li><strong>Feirões e Mutirões:</strong> Ferramentas como o Serasa Limpa Nome, Desenrola Brasil e o portal Consumidor.gov.br oferecem descontos que chegam a mais de 90% sobre o valor principal da dívida antiga.</li>
+            <li><strong>Atendimento Direto:</strong> Procure os canais oficiais do seu banco para verificar propostas de portabilidade ou quitação à vista com deságio de juros.</li>
+        </ul>
+
+        <h3>2. Entenda a Prescrição de Dívidas</h3>
+        <ul>
+            <li><strong>Regra dos 5 Anos:</strong> Segundo o Código Civil brasileiro, o nome do consumidor deve ser retirado dos órgãos de proteção ao crédito (SPC/Serasa) após o prazo máximo de 5 anos contados a partir da data de vencimento original da dívida. Atenção: a dívida deixa de sujar o nome, mas o banco ainda pode cobrar judicialmente.</li>
+        </ul>
+
+        <blockquote>
+            💡 <strong>Fonte Oficial de Consulta:</strong> Para verificar pendências financeiras registradas em seu CPF de forma oficial e gratuita, utilize sempre o sistema <strong>Registrato</strong> do <strong>Banco Central do Brasil</strong> (<code>bcb.gov.br/meubacen</code>).
+        </blockquote>
+
+        <h2>Simule o Desconto para Quitação à Vista</h2>
+        <div class="calculator">
+            <h3 style="color: #c62828; margin-top: 0;">Calculadora de Proposta de Acordo</h3>
+            
+            <label for="dividaOriginal">Valor Total Atualizado da Dívida (R$):</label>
+            <input type="number" id="dividaOriginal" placeholder="Ex: 5000">
+
+            <label for="descontoPercentual">Desconto Oferecido pelo Credor (%):</label>
+            <input type="number" id="descontoPercentual" value="70" placeholder="Ex: 70">
+
+            <button onclick="calcularAcordo()">Calcular Valor com Desconto</button>
+
+            <div class="result" id="resultadoDivida"></div>
+        </div>
+
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <ul>
+            <li><strong>Pagar a dívida limpa o nome na hora?</strong> Não imediatamente. O prazo regulamentar para os birôs de crédito baixarem a restrição após a confirmação do pagamento é de até 5 dias úteis.</li>
+            <li><strong>O banco pode recusar uma proposta justa?</strong> Os credores têm autonomia para aceitar ou recusar propostas, mas o uso de feirões oficiais maximiza as chances de acordo vantajoso.</li>
+        </ul>
+    </div>
+
+    <script>
+        function calcularAcordo() {
+            const valor = parseFloat(document.getElementById('dividaOriginal').value) || 0;
+            const desconto = parseFloat(document.getElementById('descontoPercentual').value) || 0;
+            const divResultado = document.getElementById('resultadoDivida');
+
+            if (valor <= 0) {
+                divResultado.innerHTML = "Por favor, insira um valor de dívida válido.";
+                return;
+            }
+
+            const valorDesconto = valor * (desconto / 100);
+            const valorFinal = valor - valorDesconto;
+
+            divResultado.innerHTML = `Valor Original da Dívida: R$ ${valor.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Economia com o Desconto (${desconto}%): R$ ${valorDesconto.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `<span style="color: #2e7d32;">Valor Final para Quitação: R$ ${valorFinal.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
+        }
+    </script>
+</body>
+</html>
