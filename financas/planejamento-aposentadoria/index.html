@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento de Aposentadoria e INSS: Guia e Simulador</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
+        h1, h2 { color: #2e7d32; }
+        .container { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .calculator { background: #e8f5e9; padding: 20px; border-radius: 6px; margin-top: 25px; border: 1px solid #c8e6c9; }
+        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #a5d6a7; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #388e3c; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { background-color: #2e7d32; }
+        .result { margin-top: 15px; font-weight: bold; color: #1b5e20; line-height: 1.6; }
+        blockquote { background: #f1f8e9; border-left: 4px solid #388e3c; margin: 20px 0; padding: 10px 15px; color: #33691e; }
+        ul { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Planejamento de Aposentadoria e INSS: Como Garantir Seu Futuro com Segurança Legal</h1>
+        <p>O <strong>Planejamento de Aposentadoria</strong> e a compreensão correta das regras do <strong>INSS (Instituto Nacional do Seguro Social)</strong> são pilares fundamentais para quem deseja manter o padrão de vida na terceira idade. No Brasil, o sistema previdenciário passou por profundas transformações após a Reforma da Previdência (Emenda Constitucional nº 103/2019), tornando indispensável uma estratégia de longo prazo que combine o regime público com a previdência complementar.</p>
+        
+        <p>Segundo dados oficiais do Ministério da Previdência Social e do Portal Gov.br, entender o tempo de contribuição, a idade mínima e as regras de transição evita surpresas desagradáveis e assegura o recebimento do benefício máximo ou proporcional a que você tem direito.</p>
+
+        <h2>O Cenário Atual do INSS: Regras e Transições</h2>
+        <p>Com as mudanças introduzidas pela legislação, as antigas modalidades de aposentadoria por tempo puro e simples foram substituídas por critérios combinados de idade e tempo de contribuição, além das chamadas <strong>regras de transição</strong>.</p>
+
+        <h3>1. Aposentadoria por Idade Urbana</h3>
+        <ul>
+            <li><strong>Mulheres:</strong> 62 anos de idade e mínimo de 15 anos de contribuição (180 meses).</li>
+            <li><strong>Homens:</strong> 65 anos de idade e mínimo de 15 anos de contribuição (para quem já estava no sistema) ou 20 anos de contribuição (para novos filiados após a reforma).</li>
+        </ul>
+
+        <h3>2. Principais Regras de Transição</h3>
+        <ul>
+            <li><strong>Regra da Idade Progressiva:</strong> A idade mínima sobe 6 meses a cada ano até atingir 62 anos (mulheres) e 65 anos (homens).</li>
+            <li><strong>Regra do Pedágio de 50% e 100%:</strong> Aplicada a quem faltava pouco tempo para se aposentar na época da reforma, exigindo o cumprimento do período restante acrescido de um pedágio em tempo de trabalho.</li>
+        </ul>
+
+        <blockquote>
+            💡 <strong>Fonte Oficial de Consulta:</strong> Para simular o seu tempo exato de contribuição e verificar em qual regra de transição você se encaixa, utilize sempre o portal oficial ou o aplicativo <strong>Meu INSS</strong> (<code>gov.br/meuinss</code>), gerido pela Dataprev e pelo Ministério da Previdência Social.
+        </blockquote>
+
+        <h2>O Teto do INSS e a Necessidade da Previdência Privada</h2>
+        <p>Quem ganha acima do teto do INSS durante a vida profissional sofrerá uma redução drástica na renda ao se aposentar, caso não construa uma reserva complementar. É aqui que entram os planos de previdência privada (<strong>PGBL e VGBL</strong>), excelentes ferramentas para acumulação de capital e otimização fiscal no Imposto de Renda.</p>
+
+        <h2>Simule o Crescimento do Seu Futuro Financeiro</h2>
+        <div class="calculator">
+            <h3 style="color: #2e7d32; margin-top: 0;">Simulador de Reserva para Aposentadoria</h3>
+            
+            <label for="aporteMensal">Quanto você pode guardar por mês (R$):</label>
+            <input type="number" id="aporteMensal" placeholder="Ex: 500">
+
+            <label for="anosAposentadoria">Daqui a quantos anos você pretende se aposentar?:</label>
+            <input type="number" id="anosAposentadoria" value="25">
+
+            <label for="taxaAnualAposentadoria">Rentabilidade média anual esperada (% a.a.):</label>
+            <input type="number" id="taxaAnualAposentadoria" value="8">
+
+            <button onclick="calcularAposentadoriaSimulador()">Calcular Patrimônio Futuro</button>
+
+            <div class="result" id="resultadoAposentadoria"></div>
+        </div>
+
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <ul>
+            <li><strong>O INSS pode falir?</strong> Não. O regime previdenciário brasileiro é estruturado em repartição simples e conta com o respaldo fiscal do Tesouro Nacional.</li>
+            <li><strong>Onde encontro minhas contribuições?</strong> No site ou aplicativo <strong>Meu INSS</strong>, emitindo o extrato do <strong>CNIS</strong>.</li>
+        </ul>
+    </div>
+
+    <script>
+        function calcularAposentadoriaSimulador() {
+            const pmt = parseFloat(document.getElementById('aporteMensal').value) || 0;
+            const anos = parseInt(document.getElementById('anosAposentadoria').value) || 0;
+            const taxaAnual = parseFloat(document.getElementById('taxaAnualAposentadoria').value) || 0;
+            const divResultado = document.getElementById('resultadoAposentadoria');
+
+            if (anos <= 0 || pmt <= 0) {
+                divResultado.innerHTML = "Por favor, insira valores válidos para aporte e tempo.";
+                return;
+            }
+
+            const i = (taxaAnual / 100) / 12;
+            const n = anos * 12;
+            
+            let montante = 0;
+            for (let t = 1; t <= n; t++) {
+                montante = (montante + pmt) * (1 + i);
+            }
+
+            const totalInvestido = pmt * n;
+            const jurosAcumulados = montante - totalInvestido;
+            const rendaMensalEstimada = montante * 0.005;
+
+            divResultado.innerHTML = `Patrimônio Acumulado Estimado: R$ ${montante.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Total Investido do seu bolso: R$ ${totalInvestido.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `Rendimento gerado pelos juros: R$ ${jurosAcumulados.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
+                                  `<span style="color: #b71c1c;">Renda Passiva Mensal Estimada (retirada segura de 0,5% a.m.): R$ ${rendaMensalEstimada.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>`;
+        }
+    </script>
+</body>
+</html>
