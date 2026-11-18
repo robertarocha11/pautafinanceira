@@ -4,10 +4,12 @@ var CFG={ADSENSE_CLIENT:"",ADSENSE_SLOT:""};
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
 function ticker(){var box=document.getElementById("ticker"),L=window.INDICADORES;if(!box||!L)return;
- var ul=el("ul");L.forEach(function(i){var li=el("li"),v=el("strong",0,i.valor),s=el("small",0,i.data+" · "+i.fonte);
-  li.appendChild(el("span","n",i.nome));li.appendChild(v);li.appendChild(s);ul.appendChild(li);
-  if(i.live&&window.fetch){var k=i.live.replace("-","");fetch("https://economia.awesomeapi.com.br/last/"+i.live).then(function(r){return r.json()}).then(function(d){var x=d[k],b=parseFloat(x.bid);if(!isFinite(b))return;
-   v.textContent="R$ "+b.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});s.textContent=x.create_date.slice(8,10)+"/"+x.create_date.slice(5,7)+"/"+x.create_date.slice(0,4)+" · AwesomeAPI"}).catch(function(){})}});
+ var ul=el("ul");L.forEach(function(i){var li=el("li"),v=el("strong",0,i.valor),s=el("small",0,i.data+" · "+i.fonte);li.appendChild(el("span","n",i.nome));li.appendChild(v);li.appendChild(s);ul.appendChild(li);
+  if(!window.fetch)return;
+  if(i.live){fetch("https://economia.awesomeapi.com.br/last/"+i.live).then(function(r){return r.json()}).then(function(d){var x=d[i.live.replace("-","")],b=parseFloat(x.bid);if(!isFinite(b)||b<=0)return;
+   v.textContent="R$ "+b.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});s.textContent=x.create_date.slice(8,10)+"/"+x.create_date.slice(5,7)+"/"+x.create_date.slice(0,4)+" · AwesomeAPI"}).catch(function(){})}
+  else if(i.bcb){fetch("https://api.bcb.gov.br/dados/serie/bcdata.sgs."+i.bcb+"/dados/ultimos/1?formato=json").then(function(r){return r.json()}).then(function(d){var x=d[0],n=parseFloat(x.valor);if(!isFinite(n)||n<=0)return;
+   v.textContent=n.toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})+i.sufixo;s.textContent=(i.rotulo||(i.mes?x.data.slice(3):x.data))+" · Banco Central"}).catch(function(){})}});
  box.appendChild(ul)}
 function ads(){if(ls("pf_consent")!=="accepted"||!CFG.ADSENSE_CLIENT)return;
  var slots=document.querySelectorAll(".ad-slot");if(!slots.length)return;document.body.classList.add("ads-on");
