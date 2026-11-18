@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agronegócio: gestão financeira para o campo | Pauta Financeira</title>
+  <meta name="description" content="Guias sobre custo de produção, fluxo de caixa e gestão de risco na propriedade rural, com cálculos práticos.">
+  <link rel="canonical" href="https://www.pautafinanceira.com.br/agronegocio/">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="w">
+    <a class="logo" href="/" aria-label="Pauta Financeira, página inicial"><span>Pauta <b>Financeira</b></span></a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+    <nav class="principal" aria-label="Principal">
+      <a href="/">Início</a>
+      <a href="/financas/">Finanças</a>
+      <a href="/agronegocio/" aria-current="page">Agronegócio</a>
+      <a href="/ferramentas/">Ferramentas</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w">
+  <h1 style="margin-top:36px">Agronegócio</h1>
+  <p style="max-width:760px">Gestão financeira para quem produz: custos, caixa, crédito e riscos da atividade rural.</p>
+  <div class="grid" style="margin-top:24px">
+    <a class="card" href="/agronegocio/custo-de-producao-rural/">
+      <span class="cat">Agronegócio</span>
+      <h3>Custo de produção rural: como calcular e o que ele revela</h3>
+      <p>Custos fixos e variáveis, custo por unidade e preço mínimo de equilíbrio.</p>
+      <span class="meta">Por [Nome do autor] · Atualizado em 18/11/2026 · 7 min de leitura</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 Pauta Financeira. Conteúdo educativo; não constitui recomendação de investimento, compra ou venda de ativos.</p>
+    <p>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/termos/">Termos e aviso financeiro</a>
+      <a href="/contato/">Contato</a>
+      <a href="#" id="pf-cookies">Gerenciar cookies</a>
+    </p>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookies" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos armazenamento local para lembrar a sua escolha. Saiba mais na <a href="/privacidade/" style="color:#fff">Política de Privacidade</a>.</p>
+  <button id="cookie-aceitar" class="ok">Aceitar</button>
+  <button id="cookie-recusar" class="nao">Recusar</button>
+</div>
+<script src="/script.js" defer></script>
+</body>
+</html>
