@@ -1,121 +1,313 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva de Emergência: O Guia Completo e Calculadora | Pauta Financeira</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: 0 auto; padding: 0 0 40px 0; background-color: #f9f9f9; }
-        
-        /* Cabeçalho exato com identidade visual unificada */
-        header { background-color: #ffffff; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea; margin-bottom: 30px; }
-        .logo-area { display: flex; align-items: center; text-decoration: none; }
-        
-        /* Ícone idêntico ao modelo funcional */
-        .logo-icon { width: 38px; height: 38px; background-color: #2e7d32; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-right: 12px; }
-        .logo-text { font-size: 22px; font-weight: bold; color: #1a1a1a; }
-        
-        nav { display: flex; gap: 25px; align-items: center; }
-        nav a { color: #333; text-decoration: none; font-size: 15px; font-weight: 500; padding-bottom: 4px; }
-        nav a:hover, nav a.active { color: #d35400; border-bottom: 2px solid #d35400; }
-
-        /* Container do Artigo no Formato Card */
-        .container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 0 20px; border: 1px solid #eaeaea; }
-        
-        .meta-info { font-size: 13px; color: #666; margin-bottom: 15px; }
-        
-        h1 { color: #1a1a1a; font-size: 32px; line-height: 1.2; margin-top: 0; margin-bottom: 20px; }
-        h2 { color: #004d40; margin-top: 35px; }
-        
-        .calculator { background: #e0f2f1; padding: 25px; border-radius: 6px; margin-top: 25px; border: 1px solid #b2dfdb; }
-        input { width: 100%; padding: 12px; margin: 8px 0 15px 0; border: 1px solid #80cbc4; border-radius: 4px; box-sizing: border-box; font-size: 15px; }
-        button { background-color: #00796b; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
-        button:hover { background-color: #004d40; }
-        .result { margin-top: 20px; font-weight: bold; color: #004d40; line-height: 1.6; font-size: 1.1em; }
-        blockquote { background: #f1f8e9; border-left: 4px solid #00796b; margin: 20px 0; padding: 12px 18px; color: #004d40; }
-        ul { margin-bottom: 20px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserva de emergência: quanto guardar e onde deixar | Pauta Financeira</title>
+<meta name="description" content="Como calcular a reserva de emergência com as despesas essenciais, quanto tempo leva para formá-la e onde guardar com liquidez, segurança e custo baixo.">
+<meta name="theme-color" content="#065F46">
+<link rel="canonical" href="https://www.pautafinanceira.com.br/financas/reserva-de-emergencia/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Reserva de emergência: quanto guardar e onde deixar">
+<meta property="og:description" content="Cálculo da meta, prazo para formar a reserva e comparação de onde guardar, com exemplos numéricos.">
+<meta property="og:url" content="https://www.pautafinanceira.com.br/financas/reserva-de-emergencia/">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Reserva de emergência: quanto guardar e onde deixar",
+  "description": "Como calcular a reserva de emergência com as despesas essenciais, quanto tempo leva para formá-la e onde guardar com liquidez, segurança e custo baixo.",
+  "inLanguage": "pt-BR",
+  "datePublished": "2026-11-18",
+  "dateModified": "2026-11-21",
+  "mainEntityOfPage": "https://www.pautafinanceira.com.br/financas/reserva-de-emergencia/",
+  "author": { "@type": "Organization", "name": "Redação Pauta Financeira" },
+  "publisher": { "@type": "Organization", "name": "Pauta Financeira", "url": "https://www.pautafinanceira.com.br/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Reserva de emergência é a mesma coisa que investimento?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Não. A reserva é um seguro pessoal: seu objetivo é estar disponível e preservar o valor, não buscar o maior retorno. Investimentos de prazo longo ou maior risco devem vir depois que a reserva estiver formada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Devo guardar 3, 6 ou 12 meses de despesas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende da estabilidade da renda e das responsabilidades. Como referência, de 3 a 6 meses para renda estável e de 6 a 12 meses para renda variável. Quem tem dependentes, dívidas ou problemas de saúde costuma ficar na parte alta da faixa." }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso usar a poupança como reserva de emergência?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ela tem liquidez e garantia do FGC, mas o rendimento é definido por regra legal e pode ficar abaixo de outras aplicações de baixo risco. Compare as condições vigentes antes de decidir." }
+    },
+    {
+      "@type": "Question",
+      "name": "Tesouro Selic ou CDB com liquidez diária?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ambos são usados para esse fim. A diferença está no emissor e na garantia (a União, no Tesouro, ou um banco com garantia do FGC, no CDB) e nos custos (taxa de custódia no Tesouro, percentual do CDI no CDB). Compare as condições vigentes e escolha a que se encaixa no seu caso." }
+    },
+    {
+      "@type": "Question",
+      "name": "Devo quitar dívidas antes de formar a reserva?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Depende dos juros. Muitos educadores financeiros sugerem formar uma reserva inicial pequena, como um mês de despesas, para não criar novas dívidas, e ao mesmo tempo quitar as dívidas de juros mais altos, como o rotativo do cartão." }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-    <!-- Cabeçalho Oficial Corrigido -->
-    <header>
-        <a href="https://www.pautafinanceira.com.br/" class="logo-area">
-            <div class="logo-icon">📈</div>
-            <span class="logo-text">Pauta Financeira</span>
-        </a>
-        <nav>
-            <a href="https://www.pautafinanceira.com.br/">Início</a>
-            <a href="https://www.pautafinanceira.com.br/#financas" class="active">Finanças</a>
-            <a href="https://www.pautafinanceira.com.br/#agronegocio">Agronegócio</a>
-            <a href="https://www.pautafinanceira.com.br/#ferramentas">Ferramentas</a>
-            <a href="https://www.pautafinanceira.com.br/#sobre">Sobre</a>
-        </nav>
-    </header>
+<header>
+  <div class="w">
+    <a class="logo" href="https://www.pautafinanceira.com.br/" aria-label="Pauta Financeira, página inicial">
+      <svg viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
+        <rect width="48" height="48" rx="11" fill="#065F46"/>
+        <rect x="10" y="26" width="6" height="12" rx="1.5" fill="#ECFDF5"/>
+        <rect x="21" y="19" width="6" height="19" rx="1.5" fill="#ECFDF5"/>
+        <rect x="32" y="12" width="6" height="26" rx="1.5" fill="#ECFDF5"/>
+        <path d="M9 22 L21 14 L28 18 L40 8" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo-texto">Pauta <b>Financeira</b></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menuPrincipal">Menu</button>
+    <nav class="principal" id="menuPrincipal" aria-label="Navegação principal">
+      <a href="https://www.pautafinanceira.com.br/">Início</a>
+      <a href="https://www.pautafinanceira.com.br/financas/" aria-current="page">Finanças</a>
+      <a href="https://www.pautafinanceira.com.br/agronegocio/">Agronegócio</a>
+      <a href="https://www.pautafinanceira.com.br/ferramentas/">Ferramentas</a>
+      <a href="https://www.pautafinanceira.com.br/sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Corpo do Artigo -->
-    <div class="container">
-        <div class="meta-info">Finanças pessoais · Publicado em 18/11/2026 · Atualizado em 18/11/2026 · 6 min de leitura · Por Redação Pauta Financeira</div>
+<main>
+<article class="artigo">
+  <h1>Reserva de emergência: quanto guardar e onde deixar</h1>
+  <p class="meta-topo">Finanças pessoais · Publicado em 18/11/2026 · Atualizado em 21/11/2026 · 7 min de leitura · Por Redação Pauta Financeira</p>
 
-        <h1>Reserva de Emergência: Quanto Você Realmente Precisa?</h1>
-        
-        <p>A <strong>reserva de emergência</strong> é o alicerce de qualquer planejamento financeiro saudável. Mais do que guardar dinheiro, ela representa a sua segurança e tranquilidade diante de imprevistos inevitáveis da vida, como a perda repentina de emprego, problemas de saúde ou reparos urgentes na casa e no carro.</p>
-        
-        <p>Segundo orientações de educadores financeiros e dados de órgãos de proteção ao crédito, começar a investir sem antes formar essa base é um risco que pode levar ao endividamento rápido em caso de crises.</p>
+  <p><strong>Resumo direto:</strong> a reserva de emergência é um dinheiro separado só para imprevistos, como perda de renda, problema de saúde ou conserto urgente. Como ponto de partida, ela deve cobrir de 3 a 6 meses das despesas essenciais para quem tem renda estável e de 6 a 12 meses para quem tem renda variável. O valor deve ficar em aplicações de baixo risco e resgate rápido, e não em ativos que oscilam muito.</p>
 
-        <h2>Por que a Reserva de Emergência é Indispensável?</h2>
-        <p>Muitas pessoas confundem investimentos de longo prazo com o dinheiro guardado para o curto prazo. A reserva precisa atender a três critérios fundamentais:</p>
-        <ul>
-            <li><strong>Alta Liquidez:</strong> O dinheiro precisa estar disponível para resgate imediato em dias úteis.</li>
-            <li><strong>Baixo Risco:</strong> Não pode estar exposta a oscilações fortes de mercado. O ideal são investimentos de renda fixa como o Tesouro Selic.</li>
-            <li><strong>Foco Exclusivo em Imprevistos:</strong> Esse montante não deve ser usado para viagens ou compras supérfluas.</li>
-        </ul>
+  <p>Este guia mostra como calcular a sua meta com um exemplo numérico, quanto tempo leva para formá-la, onde ela costuma ser guardada e quais cuidados tomar com impostos e garantias. Todos os valores dos exemplos são hipotéticos e servem apenas para ilustrar o raciocínio.</p>
 
-        <h2>De Quantos Meses Deve Ser a Sua Reserva?</h2>
-        <p>O padrão recomendado varia de acordo com a estabilidade da sua fonte de renda:</p>
-        <ul>
-            <li><strong>6 meses de custo de vida:</strong> O padrão mais recomendado para quem tem emprego estável (CLT).</li>
-            <li><strong>9 a 12 meses de custo de vida:</strong> Essencial para profissionais autônomos, liberais e empresários.</li>
-        </ul>
+  <div class="aviso"><strong>Conteúdo educativo.</strong> Este texto não é recomendação de investimento, nem de compra ou venda de ativos. Taxas, impostos e regras mudam; confira sempre as condições vigentes nas fontes oficiais listadas ao final.</div>
 
-        <blockquote>
-            💡 <strong>Dica de Ouro:</strong> Para calcular o seu custo mensal, leve em conta apenas os gastos essenciais para manter sua sobrevivência com dignidade (moradia, alimentação, saúde e contas básicas).
-        </blockquote>
+  <h2>O que é a reserva de emergência e por que ela vem primeiro</h2>
+  <p>A reserva funciona como um seguro que você constrói para si mesmo. Ela não existe para render o máximo possível, e sim para estar disponível no dia em que a renda falhar ou uma despesa inesperada aparecer. Sem ela, o imprevisto costuma virar dívida: cartão no rotativo, cheque especial ou empréstimo emergencial, modalidades que em geral cobram juros bem maiores do que qualquer aplicação conservadora rende. O Banco Central divulga estatísticas mensais com as taxas médias por modalidade de crédito, o que permite comparar o custo de cada caminho. Veja, no guia sobre o <a href="https://www.pautafinanceira.com.br/financas/divida-cartao-rotativo/">cartão rotativo</a>, como esse juro cresce.</p>
+  <p>Uma boa reserva reúne quatro características:</p>
+  <ul>
+    <li><strong>Finalidade exclusiva:</strong> só entra e sai dinheiro por emergência, não por viagem, promoção ou troca de celular.</li>
+    <li><strong>Liquidez:</strong> resgate em poucos dias úteis, sem perda relevante de valor.</li>
+    <li><strong>Segurança:</strong> baixo risco de perda do capital, com emissor sólido ou garantia.</li>
+    <li><strong>Separação:</strong> fica fora da conta do dia a dia, para reduzir a tentação de gastar.</li>
+  </ul>
 
-        <h2>Calculadora de Reserva de Emergência</h2>
-        <div class="calculator">
-            <label for="custo">Seu custo de vida mensal essencial (R$):</label>
-            <input type="number" id="custo" placeholder="Ex: 3500">
+  <h2>Como calcular quanto guardar</h2>
+  <h3>Passo 1: some apenas as despesas essenciais</h3>
+  <p>O cálculo parte do custo de vida essencial, e não do salário. Entram moradia, alimentação, transporte, saúde, contas básicas, educação e parcelas de dívidas obrigatórias. Ficam de fora lazer, assinaturas e compras não urgentes, que podem ser cortados numa crise. Exemplo hipotético:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Despesa essencial</th><th>Valor mensal</th></tr></thead>
+    <tbody>
+      <tr><td>Aluguel e condomínio</td><td>R$ 1.400</td></tr>
+      <tr><td>Alimentação</td><td>R$ 900</td></tr>
+      <tr><td>Transporte</td><td>R$ 400</td></tr>
+      <tr><td>Saúde (plano e remédios)</td><td>R$ 250</td></tr>
+      <tr><td>Água, luz, internet e celular</td><td>R$ 350</td></tr>
+      <tr><td>Educação</td><td>R$ 200</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>R$ 3.500</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
 
-            <label for="meses">Quantos meses de segurança você quer guardar?</label>
-            <input type="number" id="meses" value="6">
+  <h3>Passo 2: defina o número de meses</h3>
+  <p>A quantidade de meses depende da estabilidade da renda e das responsabilidades. As faixas abaixo são referências comuns em materiais de educação financeira, aplicadas ao custo de R$ 3.500:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Perfil</th><th>Meses de despesas</th><th>Meta em reais</th></tr></thead>
+    <tbody>
+      <tr><td>Renda estável (CLT, servidor)</td><td>3 a 6</td><td>R$ 10.500 a R$ 21.000</td></tr>
+      <tr><td>Renda variável (autônomo, MEI, comissionado)</td><td>6 a 12</td><td>R$ 21.000 a R$ 42.000</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Quem tem dependentes, problemas de saúde ou um único provedor na casa costuma ficar na parte alta da faixa. Não existe um número único correto: o objetivo é cobrir, com folga, o tempo que você levaria para se recolocar ou reorganizar a renda. Se a meta parece distante, comece com um mês de despesas (R$ 3.500 no exemplo). Ela já cobre boa parte dos imprevistos pequenos e cria o hábito.</p>
 
-            <button onclick="calcularReserva()">Calcular Reserva Ideal</button>
+  <h2>Quanto tempo leva para formar a reserva</h2>
+  <p>O prazo depende de quanto você consegue guardar por mês. Para a meta de R$ 21.000 (seis meses do exemplo), sem considerar rendimento:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Aporte mensal</th><th>Prazo aproximado</th></tr></thead>
+    <tbody>
+      <tr><td>R$ 500</td><td>42 meses (3 anos e 6 meses)</td></tr>
+      <tr><td>R$ 700</td><td>30 meses</td></tr>
+      <tr><td>R$ 1.000</td><td>21 meses</td></tr>
+      <tr><td>R$ 1.500</td><td>14 meses</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>O rendimento acelera um pouco o caminho. Supondo, apenas como hipótese, um rendimento líquido de 0,6% ao mês, um aporte de R$ 700 por mês chegaria a cerca de R$ 21.270 em 28 meses, dois meses antes dos 30 meses sem rendimento. A diferença é pequena, e isso mostra o ponto central: na formação da reserva pesa mais a regularidade do aporte do que a rentabilidade. O 0,6% é ilustrativo, não é previsão; as taxas reais variam com a Selic. Programar a transferência para o dia do pagamento ajuda a manter a constância, e muita gente direciona o 13º salário ou a restituição do imposto de renda para a reserva. Para entender o efeito do tempo sobre o dinheiro, leia o guia de <a href="https://www.pautafinanceira.com.br/financas/juros-compostos/">juros compostos</a>.</p>
 
-            <div class="result" id="resultado"></div>
-        </div>
+  <h2>Onde deixar o dinheiro</h2>
+  <p>Três critérios orientam a escolha: liquidez, segurança e custo. O rendimento vem depois deles. A tabela compara as alternativas mais comuns:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Opção</th><th>Liquidez</th><th>Risco e garantia</th><th>Tributação</th><th>Ponto de atenção</th></tr></thead>
+    <tbody>
+      <tr><td>Tesouro Selic</td><td>Resgate em dia útil, com recursos na conta no dia útil seguinte</td><td>Título público federal; oscilação pequena se vendido antes do vencimento</td><td>IR regressivo, IOF nos primeiros 30 dias e taxa de custódia da B3</td><td>Confira a taxa de custódia e o horário de funcionamento</td></tr>
+      <tr><td>CDB com liquidez diária</td><td>Resgate diário, conforme o emissor</td><td>Risco do banco; garantia do FGC até R$ 250 mil por CPF e por instituição</td><td>IR regressivo e IOF nos primeiros 30 dias</td><td>Compare o percentual do CDI e confirme a liquidez diária</td></tr>
+      <tr><td>Conta remunerada</td><td>Imediata, conforme o banco</td><td>Depende da instituição e de onde o saldo é aplicado</td><td>Em geral, IR regressivo</td><td>Leia as condições de rendimento e as tarifas</td></tr>
+      <tr><td>Poupança</td><td>Imediata, mas o rendimento só é creditado na data de aniversário do depósito</td><td>Garantia do FGC</td><td>Isenta de IR para pessoa física</td><td>Rendimento definido em lei; pode ficar abaixo de outras opções</td></tr>
+      <tr><td>Ações, fundos imobiliários e criptoativos</td><td>Variável</td><td>Alta oscilação e risco de perda de capital</td><td>Regras próprias</td><td>Não são adequados para a reserva</td></tr>
+    </tbody>
+  </table>
+  </div>
 
-        <h2>Perguntas Frequentes (FAQ)</h2>
-        <ul>
-            <li><strong>Onde devo deixar guardado o dinheiro?</strong> Em aplicações seguras com liquidez diária, como o Tesouro Selic ou contas que rendem 100% do CDI.</li>
-            <li><strong>Posso investir a reserva em ações?</strong> De jeito nenhum. Ações têm volatilidade e podem gerar prejuízo se você precisar resgatar no momento errado.</li>
-        </ul>
+  <h3>Imposto de renda e IOF</h3>
+  <p>Na renda fixa, o imposto de renda incide apenas sobre o rendimento, e não sobre o valor aplicado, com alíquotas decrescentes: 22,5% em resgates de até 180 dias, 20% de 181 a 360 dias, 17,5% de 361 a 720 dias e 15% acima de 720 dias. Há ainda IOF regressivo nos primeiros 30 dias. Exemplo: se uma aplicação rendeu R$ 1.000 brutos e foi resgatada antes de 180 dias, o imposto é de R$ 225; se o mesmo rendimento for resgatado após 720 dias, é de R$ 150. Como a reserva tende a ficar aplicada por longo tempo, a alíquota efetiva costuma ser a menor da tabela. As regras podem mudar por lei, então consulte a Receita Federal.</p>
+
+  <h3>Limite da garantia do FGC</h3>
+  <p>O Fundo Garantidor de Créditos protege depósitos e certos títulos de instituições associadas até R$ 250 mil por CPF e por instituição, com limite global de R$ 1 milhão a cada quatro anos. Quem tem uma reserva maior pode distribuí-la entre instituições diferentes. Títulos do Tesouro não usam o FGC, porque o emissor é a própria União.</p>
+
+  <h2>Erros comuns que enfraquecem a reserva</h2>
+  <ul>
+    <li><strong>Calcular pelo salário</strong> em vez do custo essencial, o que distorce a meta.</li>
+    <li><strong>Aplicar em produto com prazo fixo</strong> ou carência, que pode travar o dinheiro no pior momento.</li>
+    <li><strong>Buscar rentabilidade com risco:</strong> um ativo que cai 15% justamente quando você precisa transforma a reserva em prejuízo.</li>
+    <li><strong>Misturar objetivos,</strong> como reserva, viagem e entrada do carro no mesmo saldo.</li>
+    <li><strong>Não repor</strong> o valor depois de usá-lo.</li>
+    <li><strong>Nunca revisar:</strong> com a inflação, o custo de vida sobe e a meta fica defasada.</li>
+  </ul>
+
+  <h2>Quando usar e como repor</h2>
+  <p>Emergência é perda de renda, despesa de saúde não coberta, reparo indispensável na casa ou no meio de transporte usado para trabalhar. Uma liquidação de loja não é. Em caso de dúvida, pergunte a si mesmo se o gasto era imprevisto e urgente. Se usar a reserva, trate a reposição como prioridade: reduza gastos variáveis e redirecione o aporte mensal até recompor a meta. Montar um <a href="https://www.pautafinanceira.com.br/financas/orcamento-50-30-20/">orçamento</a> ajuda a encontrar esse dinheiro.</p>
+
+  <h2>Plano em cinco passos</h2>
+  <ol>
+    <li>Liste as despesas essenciais dos últimos três meses e calcule a média.</li>
+    <li>Escolha a meta em meses de acordo com o seu perfil de renda.</li>
+    <li>Defina um aporte fixo e programe a transferência para o dia do pagamento.</li>
+    <li>Escolha uma aplicação que cumpra liquidez, segurança e custo, separada da conta corrente.</li>
+    <li>Revise a meta uma vez por ano e após mudanças de vida, como filhos, mudança de cidade ou troca de emprego.</li>
+  </ol>
+
+  <h2>Calculadora: meta e prazo da sua reserva</h2>
+  <div class="calc">
+    <div class="campos">
+      <div><label for="cCusto">Despesas essenciais por mês (R$)</label><input type="number" id="cCusto" min="0" step="0.01" placeholder="3500"></div>
+      <div><label for="cMeses">Meses de cobertura</label><input type="number" id="cMeses" min="1" step="1" value="6"></div>
+      <div><label for="cAtual">Quanto você já tem guardado (R$)</label><input type="number" id="cAtual" min="0" step="0.01" value="0"></div>
+      <div><label for="cAporte">Aporte mensal (R$)</label><input type="number" id="cAporte" min="0" step="0.01" placeholder="700"></div>
+      <div><label for="cTaxa">Rendimento líquido mensal (%)</label><input type="number" id="cTaxa" min="0" step="0.01" value="0"></div>
     </div>
+    <button type="button" class="acao" id="cBtn">Calcular</button>
+    <div class="resultado" id="cRes" role="status" aria-live="polite"></div>
+    <p class="ajuda">Simulação educativa, sem impostos e sem garantia de rendimento. Para outras contas, veja as <a href="https://www.pautafinanceira.com.br/ferramentas/#reserva">ferramentas do site</a>.</p>
+  </div>
 
-    <script>
-        function calcularReserva() {
-            const custo = parseFloat(document.getElementById('custo').value);
-            const meses = parseInt(document.getElementById('meses').value);
-            const resultado = document.getElementById('resultado');
+  <h2>Fontes e referências</h2>
+  <ul>
+    <li>Banco Central do Brasil: taxa Selic, estatísticas de juros por modalidade de crédito e regras de rendimento da poupança (<a href="https://www.bcb.gov.br" rel="noopener">bcb.gov.br</a>).</li>
+    <li>Tesouro Direto (Tesouro Nacional e B3): características do Tesouro Selic, prazos de resgate e taxas (<a href="https://www.tesourodireto.com.br" rel="noopener">tesourodireto.com.br</a>).</li>
+    <li>Receita Federal: tributação de aplicações de renda fixa (<a href="https://www.gov.br/receitafederal" rel="noopener">gov.br/receitafederal</a>).</li>
+    <li>Fundo Garantidor de Créditos: limites e produtos cobertos (<a href="https://www.fgc.org.br" rel="noopener">fgc.org.br</a>).</li>
+    <li>Comissão de Valores Mobiliários: material de educação financeira (<a href="https://www.gov.br/cvm" rel="noopener">gov.br/cvm</a>).</li>
+  </ul>
 
-            if (isNaN(custo) || isNaN(meses) || custo <= 0) {
-                resultado.innerHTML = "Por favor, insira um valor válido para o seu custo mensal.";
-                return;
-            }
+  <h2>Perguntas frequentes</h2>
+  <h3>Reserva de emergência é a mesma coisa que investimento?</h3>
+  <p>Não. A reserva é um seguro pessoal: seu objetivo é estar disponível e preservar o valor, não buscar o maior retorno. Investimentos de prazo longo ou maior risco devem vir depois que a reserva estiver formada.</p>
+  <h3>Devo guardar 3, 6 ou 12 meses de despesas?</h3>
+  <p>Depende da estabilidade da renda e das responsabilidades. Como referência, de 3 a 6 meses para renda estável e de 6 a 12 meses para renda variável. Quem tem dependentes, dívidas ou problemas de saúde costuma ficar na parte alta da faixa.</p>
+  <h3>Posso usar a poupança como reserva de emergência?</h3>
+  <p>Ela tem liquidez e garantia do FGC, mas o rendimento é definido por regra legal e pode ficar abaixo de outras aplicações de baixo risco. Compare as condições vigentes antes de decidir.</p>
+  <h3>Tesouro Selic ou CDB com liquidez diária?</h3>
+  <p>Ambos são usados para esse fim. A diferença está no emissor e na garantia (a União, no Tesouro, ou um banco com garantia do FGC, no CDB) e nos custos (taxa de custódia no Tesouro, percentual do CDI no CDB). Compare as condições vigentes e escolha a que se encaixa no seu caso.</p>
+  <h3>Devo quitar dívidas antes de formar a reserva?</h3>
+  <p>Depende dos juros. Muitos educadores financeiros sugerem formar uma reserva inicial pequena, como um mês de despesas, para não criar novas dívidas, e ao mesmo tempo quitar as dívidas de juros mais altos, como o rotativo do cartão.</p>
 
-            const total = custo * meses;
-            resultado.innerHTML = `O valor ideal para a sua reserva de emergência é de: R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        }
-    </script>
+  <div class="autor"><strong>Por Redação Pauta Financeira.</strong> Texto educativo, produzido a partir de fontes oficiais e revisado em 21/11/2026. Encontrou algum erro ou tem uma sugestão? Fale conosco pela página de <a href="https://www.pautafinanceira.com.br/contato/">contato</a>. Saiba como produzimos os textos em <a href="https://www.pautafinanceira.com.br/sobre/">Sobre</a>.</div>
+</article>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 Pauta Financeira. Conteúdo educativo; não constitui recomendação de investimento, compra ou venda de ativos.</p>
+    <p>
+      <a href="https://www.pautafinanceira.com.br/privacidade/">Privacidade</a>
+      <a href="https://www.pautafinanceira.com.br/termos/">Termos e aviso financeiro</a>
+      <a href="https://www.pautafinanceira.com.br/contato/">Contato</a>
+      <a href="#" id="gerenciarCookies">Gerenciar cookies</a>
+    </p>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos armazenamento local para lembrar a sua escolha. Saiba mais na <a href="https://www.pautafinanceira.com.br/privacidade/">Política de Privacidade</a>.</p>
+  <button type="button" class="ok" id="cookiesOk">Aceitar</button>
+  <button type="button" class="nao" id="cookiesNao">Recusar</button>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('menuPrincipal');
+  btn.addEventListener('click', function () {
+    var aberto = nav.classList.toggle('aberto');
+    btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+  });
+
+  var box = document.getElementById('cookies');
+  function lerConsent() { try { return localStorage.getItem('pf-consent'); } catch (e) { return null; } }
+  function gravarConsent(v) { try { localStorage.setItem('pf-consent', v); } catch (e) {} box.style.display = 'none'; }
+  if (!lerConsent()) { box.style.display = 'block'; }
+  document.getElementById('cookiesOk').addEventListener('click', function () { gravarConsent('aceito'); });
+  document.getElementById('cookiesNao').addEventListener('click', function () { gravarConsent('recusado'); });
+  document.getElementById('gerenciarCookies').addEventListener('click', function (e) {
+    e.preventDefault();
+    try { localStorage.removeItem('pf-consent'); } catch (err) {}
+    box.style.display = 'block';
+  });
+
+  function brl(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  document.getElementById('cBtn').addEventListener('click', function () {
+    var custo = parseFloat(document.getElementById('cCusto').value);
+    var meses = parseInt(document.getElementById('cMeses').value, 10);
+    var atual = parseFloat(document.getElementById('cAtual').value) || 0;
+    var aporte = parseFloat(document.getElementById('cAporte').value) || 0;
+    var taxa = (parseFloat(document.getElementById('cTaxa').value) || 0) / 100;
+    var res = document.getElementById('cRes');
+    res.style.display = 'block';
+    if (isNaN(custo) || custo <= 0 || isNaN(meses) || meses <= 0) {
+      res.innerHTML = 'Informe um valor válido de despesas essenciais e de meses.';
+      return;
+    }
+    var meta = custo * meses;
+    if (atual >= meta) {
+      res.innerHTML = '<strong>Meta: ' + brl(meta) + '</strong><br>Você já atingiu a meta com o valor que tem guardado.';
+      return;
+    }
+    if (aporte <= 0 && taxa <= 0) {
+      res.innerHTML = '<strong>Meta: ' + brl(meta) + '</strong><br>Faltam ' + brl(meta - atual) + '. Informe um aporte mensal para estimar o prazo.';
+      return;
+    }
+    var saldo = atual, n = 0;
+    while (saldo < meta && n < 1200) { saldo = saldo * (1 + taxa) + aporte; n++; }
+    if (saldo < meta) {
+      res.innerHTML = '<strong>Meta: ' + brl(meta) + '</strong><br>Com esses valores a meta não é atingida em um prazo razoável. Aumente o aporte.';
+      return;
+    }
+    var anos = Math.floor(n / 12), resto = n % 12;
+    var txt = n + (n === 1 ? ' mês' : ' meses');
+    if (anos > 0) { txt += ' (' + anos + (anos === 1 ? ' ano' : ' anos') + (resto ? ' e ' + resto + (resto === 1 ? ' mês' : ' meses') : '') + ')'; }
+    res.innerHTML = '<strong>Meta: ' + brl(meta) + '</strong><br>Prazo estimado: ' + txt + '.';
+  });
+})();
+</script>
 </body>
 </html>
