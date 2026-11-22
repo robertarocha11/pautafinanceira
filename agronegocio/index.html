@@ -3,20 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agronegócio: gestão financeira e crédito rural | Pauta Financeira</title>
-  <meta name="description" content="Guias sobre custo de produção, Plano Safra e fluxo de caixa da safra, com cálculos práticos e uma calculadora de custo por unidade.">
+  <title>Agronegócio: custo de produção, crédito rural e fluxo de caixa | Pauta Financeira</title>
+  <meta name="description" content="Guias de gestão financeira rural sobre custo de produção, Plano Safra, crédito rural e fluxo de caixa da safra, com exemplos calculados e fontes oficiais.">
   <link rel="canonical" href="https://www.pautafinanceira.com.br/agronegocio/">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#065F46">
-  <meta property="og:title" content="Agronegócio: gestão financeira e crédito rural | Pauta Financeira">
-  <meta property="og:description" content="Custo de produção, Plano Safra e fluxo de caixa da propriedade rural.">
+  <meta property="og:title" content="Agronegócio | Pauta Financeira">
+  <meta property="og:description" content="Custo de produção, Plano Safra e fluxo de caixa da safra, com exemplos calculados.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.pautafinanceira.com.br/agronegocio/">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Agronegócio",
+    "description": "Guias de gestão financeira rural sobre custo de produção, Plano Safra, crédito rural e fluxo de caixa da safra.",
+    "url": "https://www.pautafinanceira.com.br/agronegocio/",
+    "inLanguage": "pt-BR",
+    "isPartOf": { "@type": "WebSite", "name": "Pauta Financeira", "url": "https://www.pautafinanceira.com.br/" }
+  }
+  </script>
   <style>
     .intro { max-width: 780px; margin: 44px auto 8px; }
     .intro h1 { font-size: 2.2rem; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 12px; }
-    .intro p { color: var(--cinza); margin: 0; }
+    .intro p { color: var(--cinza); margin: 0 0 8px; }
+    .trilha { max-width: 780px; margin: 28px auto 0; }
+    .trilha h2 { color: var(--verde); font-size: 1.3rem; }
   </style>
 </head>
 <body>
@@ -52,15 +71,7 @@
 <header>
   <div class="w">
     <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
-      <svg viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
-        <rect width="48" height="48" rx="13" fill="#065F46"/>
-        <rect x="9" y="28" width="6" height="9" rx="1.5" fill="#D1FAE5"/>
-        <rect x="19" y="22" width="6" height="15" rx="1.5" fill="#A7F3D0"/>
-        <rect x="29" y="16" width="6" height="21" rx="1.5" fill="#ECFDF5"/>
-        <path d="M7 24.5L17 17l5 3.5L36 9" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M29 9h7v7" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M37 37c-3.5 0-5.5-2-5.5-5.5 3.5 0 5.5 2 5.5 5.5z" fill="#34D399"/>
-      </svg>
+      <img src="/assets/logo-pauta-financeira-icone.png" alt="" width="42" height="42" decoding="async" style="width:42px;height:42px;flex-shrink:0;object-fit:contain">
       <span class="logo-texto">Pauta <b>Financeira</b></span>
     </a>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
@@ -74,49 +85,57 @@
   </div>
 </header>
 
-<main>
-  <div class="w">
-    <div class="intro">
-      <h1>Agronegócio</h1>
-      <p>Gestão financeira para quem produz: custos, crédito, caixa e os números que definem a margem da propriedade. Os textos mostram o cálculo passo a passo, com exemplos hipotéticos que você pode substituir pelos seus dados.</p>
-    </div>
+<main class="w">
+  <div class="intro">
+    <h1>Agronegócio</h1>
+    <p>Guias de gestão financeira para quem produz: como calcular o custo de produção, planejar o caixa da safra mês a mês e entender o crédito rural e o Plano Safra antes de contratar. Cada texto traz exemplos calculados, fontes oficiais e a data da última atualização.</p>
+    <p>Os números dos exemplos são hipotéticos. Preços, custos e condições de crédito variam por região, cultura e instituição, e o conteúdo é educativo, sem recomendação de compra, venda ou contratação. Saiba como trabalhamos em <a href="/sobre/">Sobre</a>.</p>
+  </div>
 
-    <h2 class="secao">Guias</h2>
-    <div class="grid">
-      <a class="card rural" href="/agronegocio/custo-producao-rural/">
-        <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-trigo"/></svg></span>
-        <span class="cat">Agronegócio</span>
-        <h3>Custo de produção rural: como calcular e o que ele revela</h3>
-        <p>Custos fixos e variáveis, custo por unidade, produtividade mínima de equilíbrio e o efeito do tamanho da área.</p>
-        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
-      </a>
-      <a class="card rural" href="/agronegocio/plano-safra-como-funciona/">
-        <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-campo"/></svg></span>
-        <span class="cat">Agronegócio</span>
-        <h3>Plano Safra: como funciona o crédito rural e se ele compensa</h3>
-        <p>Custeio, investimento e comercialização, custo total de uma operação e a checagem de prazo e garantias.</p>
-        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 8 min de leitura</span>
-      </a>
-      <a class="card rural" href="/agronegocio/fluxo-de-caixa-da-safra/">
-        <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-fluxo"/></svg></span>
-        <span class="cat">Agronegócio</span>
-        <h3>Fluxo de caixa da safra: como planejar entradas e saídas mês a mês</h3>
-        <p>Por que o resultado positivo não evita falta de caixa e como testar cenários de preço e produtividade.</p>
-        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
-      </a>
-    </div>
+  <h2 class="secao">Guias de agronegócio</h2>
+  <div class="grid">
+    <a class="card rural" href="/agronegocio/custo-producao-rural/">
+      <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-trigo"/></svg></span>
+      <span class="cat">Agronegócio</span>
+      <h3>Custo de produção rural: como calcular e o que ele revela</h3>
+      <p>Custos fixos e variáveis, custo por unidade, produtividade mínima de equilíbrio e o efeito do tamanho da área.</p>
+      <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
+    </a>
+    <a class="card rural" href="/agronegocio/plano-safra-como-funciona/">
+      <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-campo"/></svg></span>
+      <span class="cat">Agronegócio</span>
+      <h3>Plano Safra: como funciona o crédito rural e se ele compensa</h3>
+      <p>Custeio, investimento e comercialização, custo total de uma operação e a checagem de prazo e garantias.</p>
+      <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 8 min de leitura</span>
+    </a>
+    <a class="card rural" href="/agronegocio/fluxo-de-caixa-da-safra/">
+      <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-fluxo"/></svg></span>
+      <span class="cat">Agronegócio</span>
+      <h3>Fluxo de caixa da safra: como planejar entradas e saídas mês a mês</h3>
+      <p>Por que o resultado positivo não evita falta de caixa e como testar cenários de preço e produtividade.</p>
+      <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
+    </a>
+  </div>
 
-    <h2 class="secao">Ferramenta</h2>
-    <p class="secao-sub">Calcule o custo por unidade e a receita estimada com os números da sua lavoura.</p>
-    <div class="grid">
-      <a class="card rural" href="/ferramentas/#custo-rural">
-        <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-planta"/></svg></span>
-        <span class="cat">Calculadora rural</span>
-        <h3>Custo por saca ou por unidade</h3>
-        <p>Informe a área, os custos e a produtividade para estimar o preço mínimo de equilíbrio.</p>
-        <span class="acesso">Abrir ferramenta →</span>
-      </a>
-    </div>
+  <div class="trilha">
+    <h2>Por onde começar</h2>
+    <p>Para organizar as contas da propriedade, esta ordem costuma funcionar:</p>
+    <ol>
+      <li><strong>Descubra quanto custa produzir</strong> com o guia de <a href="/agronegocio/custo-producao-rural/">custo de produção rural</a>.</li>
+      <li><strong>Planeje quando o dinheiro entra e sai</strong> no <a href="/agronegocio/fluxo-de-caixa-da-safra/">fluxo de caixa da safra</a>.</li>
+      <li><strong>Só então avalie o crédito:</strong> entenda como funciona e quanto custa em <a href="/agronegocio/plano-safra-como-funciona/">Plano Safra</a>.</li>
+    </ol>
+  </div>
+
+  <h2 class="secao">Calculadora relacionada</h2>
+  <div class="grid">
+    <a class="card rural" href="/ferramentas/#custo-rural">
+      <span class="ico ambar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-planta"/></svg></span>
+      <span class="cat">Calculadora rural</span>
+      <h3>Custo por saca ou por unidade</h3>
+      <p>Calcule o custo de produção por unidade, o preço mínimo de equilíbrio e a receita estimada.</p>
+      <span class="acesso">Abrir ferramenta →</span>
+    </a>
   </div>
 </main>
 
