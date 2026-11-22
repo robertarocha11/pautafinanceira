@@ -7,12 +7,18 @@
   <meta name="description" content="Calculadoras gratuitas de juros compostos, reserva de emergência, parcelas de financiamento e custo de produção rural. Os cálculos são feitos no seu navegador.">
   <link rel="canonical" href="https://www.pautafinanceira.com.br/ferramentas/">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#065F46">
   <meta property="og:title" content="Ferramentas financeiras e rurais gratuitas | Pauta Financeira">
   <meta property="og:description" content="Calculadoras de finanças pessoais e de agronegócio, com cálculos feitos no seu navegador.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.pautafinanceira.com.br/ferramentas/">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png">
   <style>
     .intro { max-width: 780px; margin: 44px auto 8px; }
     .intro h1 { font-size: 2.2rem; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 12px; }
@@ -55,15 +61,7 @@
 <header>
   <div class="w">
     <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
-      <svg viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
-        <rect width="48" height="48" rx="13" fill="#065F46"/>
-        <rect x="9" y="28" width="6" height="9" rx="1.5" fill="#D1FAE5"/>
-        <rect x="19" y="22" width="6" height="15" rx="1.5" fill="#A7F3D0"/>
-        <rect x="29" y="16" width="6" height="21" rx="1.5" fill="#ECFDF5"/>
-        <path d="M7 24.5L17 17l5 3.5L36 9" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M29 9h7v7" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M37 37c-3.5 0-5.5-2-5.5-5.5 3.5 0 5.5 2 5.5 5.5z" fill="#34D399"/>
-      </svg>
+      <img src="/assets/logo-pauta-financeira-icone.png" alt="" width="42" height="42" decoding="async" style="width:42px;height:42px;flex-shrink:0;object-fit:contain">
       <span class="logo-texto">Pauta <b>Financeira</b></span>
     </a>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
@@ -270,26 +268,4 @@
     if (!positivo(area) || area === 0 || !positivo(fixo) || !positivo(varHa) || !positivo(prod) || prod === 0) {
       return erro("out-rural", "Informe a área, os custos e a produtividade por hectare. Área e produtividade precisam ser maiores que zero.");
     }
-    var custoTotal = fixo + varHa * area;
-    var producao = prod * area;
-    var custoUnidade = custoTotal / producao;
-    var temPreco = !isNaN(preco) && preco > 0;
-    var html =
-      "<p>Custo total da lavoura: <strong>" + brl(custoTotal) + "</strong></p>" +
-      "<p>Produção total estimada: " + producao.toLocaleString("pt-BR", { maximumFractionDigits: 2 }) + " unidades.</p>" +
-      "<p>Custo por unidade (preço mínimo de equilíbrio): <strong>" + brl(custoUnidade) + "</strong></p>";
-    if (temPreco) {
-      var pme = custoTotal / (preco * area);
-      var receita = producao * preco;
-      var resultado = receita - custoTotal;
-      html +=
-        "<p>Produtividade mínima de equilíbrio com preço de " + brl(preco) + ": <strong>" + pme.toLocaleString("pt-BR", { maximumFractionDigits: 2 }) + " unidades por hectare</strong>.</p>" +
-        "<p>Receita estimada: " + brl(receita) + ". Resultado antes de impostos e despesas não listadas: " + brl(resultado) + ".</p>";
-    }
-    html += "<p class=\"ajuda\">Cálculo simplificado. Inclua todos os custos reais, como mão de obra, juros, depreciação, frete e impostos, para uma análise completa.</p>";
-    mostra("out-rural", html);
-  });
-})();
-</script>
-</body>
-</html>
+    var custoTotal = fixo
