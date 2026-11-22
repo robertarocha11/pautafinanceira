@@ -3,39 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Finanças pessoais: guias práticos com exemplos calculados | Pauta Financeira</title>
-  <meta name="description" content="Guias sobre reserva de emergência, juros compostos, orçamento 50-30-20 e cartão rotativo, com exemplos calculados, fontes oficiais e ferramentas gratuitas.">
+  <title>Finanças pessoais: guias com exemplos e calculadoras | Pauta Financeira</title>
+  <meta name="description" content="Guias de finanças pessoais sobre orçamento, reserva de emergência, juros compostos e dívidas de cartão, com exemplos calculados e fontes oficiais.">
   <link rel="canonical" href="https://www.pautafinanceira.com.br/financas/">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#065F46">
-  <meta property="og:title" content="Finanças pessoais: guias práticos | Pauta Financeira">
-  <meta property="og:description" content="Guias com exemplos calculados sobre reserva, juros, orçamento e dívidas.">
+  <meta property="og:title" content="Finanças pessoais | Pauta Financeira">
+  <meta property="og:description" content="Orçamento, reserva de emergência, juros compostos e dívidas, com exemplos calculados.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.pautafinanceira.com.br/financas/">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Finanças pessoais",
+    "description": "Guias de finanças pessoais sobre orçamento, reserva de emergência, juros compostos e dívidas de cartão.",
+    "url": "https://www.pautafinanceira.com.br/financas/",
+    "inLanguage": "pt-BR",
+    "isPartOf": { "@type": "WebSite", "name": "Pauta Financeira", "url": "https://www.pautafinanceira.com.br/" }
+  }
+  </script>
   <style>
     .intro { max-width: 780px; margin: 44px auto 8px; }
     .intro h1 { font-size: 2.2rem; line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 12px; }
-    .intro p { color: var(--cinza); margin: 0; }
+    .intro p { color: var(--cinza); margin: 0 0 8px; }
+    .trilha { max-width: 780px; margin: 28px auto 0; }
+    .trilha h2 { color: var(--verde); font-size: 1.3rem; }
   </style>
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
-    <symbol id="i-escudo" viewBox="0 0 24 24">
-      <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
-      <path d="M9 12l2 2 4-4"/>
-    </symbol>
-    <symbol id="i-grafico" viewBox="0 0 24 24">
-      <path d="M3 17l5.5-5.5 4 4L21 7"/>
-      <path d="M15 7h6v6"/>
-    </symbol>
     <symbol id="i-cofrinho" viewBox="0 0 24 24">
       <ellipse cx="11" cy="13" rx="7.5" ry="5.5"/>
       <path d="M8 8.2V6.5h3.5"/>
       <path d="M6.2 16.5V19M15.2 16.5V19"/>
       <path d="M18.5 12.2l2-.6v1.8l-2 .6"/>
+    </symbol>
+    <symbol id="i-grafico" viewBox="0 0 24 24">
+      <path d="M3 17l5.5-5.5 4 4L21 7"/>
+      <path d="M15 7h6v6"/>
+    </symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24">
+      <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="i-calculadora" viewBox="0 0 24 24">
+      <rect x="5" y="3" width="14" height="18" rx="2.5"/>
+      <path d="M8.5 7.5h7"/>
+      <path d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 15.5h.01M12 15.5h.01M15.5 15.5h.01"/>
     </symbol>
     <symbol id="i-carteira" viewBox="0 0 24 24">
       <rect x="3" y="6" width="18" height="13" rx="2.5"/>
@@ -47,26 +71,13 @@
       <path d="M3 10h18"/>
       <path d="M7 15h4"/>
     </symbol>
-    <symbol id="i-calculadora" viewBox="0 0 24 24">
-      <rect x="5" y="3" width="14" height="18" rx="2.5"/>
-      <path d="M8.5 7.5h7"/>
-      <path d="M8.5 12h.01M12 12h.01M15.5 12h.01M8.5 15.5h.01M12 15.5h.01M15.5 15.5h.01"/>
-    </symbol>
   </defs>
 </svg>
 
 <header>
   <div class="w">
     <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
-      <svg viewBox="0 0 48 48" role="img" aria-hidden="true" focusable="false">
-        <rect width="48" height="48" rx="13" fill="#065F46"/>
-        <rect x="9" y="28" width="6" height="9" rx="1.5" fill="#D1FAE5"/>
-        <rect x="19" y="22" width="6" height="15" rx="1.5" fill="#A7F3D0"/>
-        <rect x="29" y="16" width="6" height="21" rx="1.5" fill="#ECFDF5"/>
-        <path d="M7 24.5L17 17l5 3.5L36 9" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M29 9h7v7" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M37 37c-3.5 0-5.5-2-5.5-5.5 3.5 0 5.5 2 5.5 5.5z" fill="#34D399"/>
-      </svg>
+      <img src="/assets/logo-pauta-financeira-icone.png" alt="" width="42" height="42" decoding="async" style="width:42px;height:42px;flex-shrink:0;object-fit:contain">
       <span class="logo-texto">Pauta <b>Financeira</b></span>
     </a>
     <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
@@ -80,70 +91,79 @@
   </div>
 </header>
 
-<main>
-  <div class="w">
-    <div class="intro">
-      <h1>Finanças pessoais</h1>
-      <p>Guias para organizar o dia a dia, formar uma reserva, entender como o dinheiro cresce ou encolhe com o tempo e sair das dívidas caras. Cada texto traz exemplos calculados, passo a passo e fontes oficiais.</p>
-    </div>
+<main class="w">
+  <div class="intro">
+    <h1>Finanças pessoais</h1>
+    <p>Guias para organizar o orçamento, montar uma reserva, entender como os juros funcionam e sair de dívidas caras. Cada texto traz exemplos calculados, passo a passo, fontes oficiais e a data da última atualização.</p>
+    <p>Todo o conteúdo é educativo: não recomendamos a compra ou a venda de ativos nem prometemos retorno. Saiba como trabalhamos em <a href="/sobre/">Sobre</a>.</p>
+  </div>
 
-    <h2 class="secao">Guias</h2>
-    <div class="grid">
-      <a class="card" href="/financas/reserva-de-emergencia/">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-escudo"/></svg></span>
-        <span class="cat">Finanças pessoais</span>
-        <h3>Reserva de emergência: quanto guardar e onde deixar</h3>
-        <p>Como calcular a meta com base nas despesas essenciais, quanto tempo leva para formá-la e onde guardar com liquidez.</p>
-        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 6 min de leitura</span>
-      </a>
-      <a class="card" href="/financas/juros-compostos/">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grafico"/></svg></span>
-        <span class="cat">Finanças pessoais</span>
-        <h3>Juros compostos na prática: por que o tempo importa tanto</h3>
-        <p>Exemplos com aportes mensais, prazo e o efeito dos juros tanto nos investimentos quanto nas dívidas.</p>
-        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
-      </a>
-      <a class="card" href="/financas/orcamento-50-30-20/">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-carteira"/></svg></span>
-        <span class="cat">Finanças pessoais</span>
-        <h3>Orçamento 50-30-20: como dividir a renda sem planilha complicada</h3>
-        <p>Exemplo com R$ 5.000 líquidos, ajustes para quando as necessidades pesam mais e passo a passo para começar.</p>
-        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
-      </a>
-      <a class="card" href="/financas/divida-cartao-rotativo/">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cartao"/></svg></span>
-        <span class="cat">Finanças pessoais</span>
-        <h3>Cartão de crédito rotativo: como o juro cresce e como sair dele</h3>
-        <p>Tabela mês a mês de uma dívida rotativa, comparação com um empréstimo e um plano prático de 90 dias.</p>
-        <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
-      </a>
-    </div>
+  <h2 class="secao">Guias de finanças pessoais</h2>
+  <div class="grid">
+    <a class="card" href="/financas/reserva-de-emergencia/">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-escudo"/></svg></span>
+      <span class="cat">Finanças pessoais</span>
+      <h3>Reserva de emergência: quanto guardar e onde deixar</h3>
+      <p>Como calcular a meta com base nas despesas essenciais, quanto tempo leva para formá-la e onde guardar com liquidez.</p>
+      <span class="meta">Por Redação Pauta Financeira · Atualizado em 22/11/2026 · 7 min de leitura</span>
+    </a>
+    <a class="card" href="/financas/juros-compostos/">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-grafico"/></svg></span>
+      <span class="cat">Finanças pessoais</span>
+      <h3>Juros compostos na prática: por que o tempo importa tanto</h3>
+      <p>Exemplos com aportes mensais, prazo e o efeito dos juros tanto nos investimentos quanto nas dívidas.</p>
+      <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
+    </a>
+    <a class="card" href="/financas/orcamento-50-30-20/">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-carteira"/></svg></span>
+      <span class="cat">Finanças pessoais</span>
+      <h3>Orçamento 50-30-20: como dividir a renda sem planilha complicada</h3>
+      <p>Exemplo com R$ 5.000 líquidos, ajustes para quando as necessidades pesam mais e passo a passo para começar.</p>
+      <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
+    </a>
+    <a class="card" href="/financas/divida-cartao-rotativo/">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cartao"/></svg></span>
+      <span class="cat">Finanças pessoais</span>
+      <h3>Cartão de crédito rotativo: como o juro cresce e como sair dele</h3>
+      <p>Tabela mês a mês de uma dívida rotativa, comparação com um empréstimo e um plano prático de 90 dias.</p>
+      <span class="meta">Por Redação Pauta Financeira · Atualizado em 18/11/2026 · 7 min de leitura</span>
+    </a>
+  </div>
 
-    <h2 class="secao">Ferramentas para testar seus números</h2>
-    <p class="secao-sub">As calculadoras funcionam no navegador e não armazenam os valores digitados.</p>
-    <div class="grid">
-      <a class="card" href="/ferramentas/#reserva">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-escudo"/></svg></span>
-        <span class="cat">Calculadora</span>
-        <h3>Meta da reserva de emergência</h3>
-        <p>Descubra o valor da sua reserva e quantos meses leva para alcançá-lo.</p>
-        <span class="acesso">Abrir ferramenta →</span>
-      </a>
-      <a class="card" href="/ferramentas/#juros">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cofrinho"/></svg></span>
-        <span class="cat">Calculadora</span>
-        <h3>Juros compostos com aportes mensais</h3>
-        <p>Simule o total acumulado com um valor inicial e aportes regulares, sem impostos.</p>
-        <span class="acesso">Abrir ferramenta →</span>
-      </a>
-      <a class="card" href="/ferramentas/#financiamento">
-        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calculadora"/></svg></span>
-        <span class="cat">Calculadora</span>
-        <h3>Parcelas de financiamento</h3>
-        <p>Estime a parcela fixa e o total de juros a partir da taxa mensal e do prazo.</p>
-        <span class="acesso">Abrir ferramenta →</span>
-      </a>
-    </div>
+  <div class="trilha">
+    <h2>Por onde começar</h2>
+    <p>Se você não sabe qual guia ler primeiro, esta ordem costuma funcionar:</p>
+    <ol>
+      <li><strong>Entenda para onde vai o dinheiro</strong> com o guia de <a href="/financas/orcamento-50-30-20/">orçamento 50-30-20</a>.</li>
+      <li><strong>Se há dívida cara,</strong> veja como o juro cresce no <a href="/financas/divida-cartao-rotativo/">cartão rotativo</a> e monte um plano de saída.</li>
+      <li><strong>Forme um colchão</strong> contra imprevistos na <a href="/financas/reserva-de-emergencia/">reserva de emergência</a>.</li>
+      <li><strong>Entenda o efeito do tempo</strong> em <a href="/financas/juros-compostos/">juros compostos</a>.</li>
+    </ol>
+  </div>
+
+  <h2 class="secao">Calculadoras relacionadas</h2>
+  <div class="grid">
+    <a class="card" href="/ferramentas/#juros">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-cofrinho"/></svg></span>
+      <span class="cat">Calculadora</span>
+      <h3>Juros compostos com aportes mensais</h3>
+      <p>Simule quanto um aporte regular pode render ao longo do tempo, sem considerar impostos.</p>
+      <span class="acesso">Abrir ferramenta →</span>
+    </a>
+    <a class="card" href="/ferramentas/#reserva">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-escudo"/></svg></span>
+      <span class="cat">Calculadora</span>
+      <h3>Meta da reserva de emergência</h3>
+      <p>Descubra o valor ideal da sua reserva e quantos meses leva para alcançá-lo.</p>
+      <span class="acesso">Abrir ferramenta →</span>
+    </a>
+    <a class="card" href="/ferramentas/#financiamento">
+      <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calculadora"/></svg></span>
+      <span class="cat">Calculadora</span>
+      <h3>Parcelas de financiamento</h3>
+      <p>Estime a parcela fixa e o total de juros de uma operação, a partir da taxa mensal e do prazo.</p>
+      <span class="acesso">Abrir ferramenta →</span>
+    </a>
   </div>
 </main>
 
