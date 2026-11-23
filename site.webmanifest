@@ -1,0 +1,19 @@
+{
+  "name": "Pauta Financeira",
+  "short_name": "Pauta Financeira",
+  "description": "Educação financeira para a cidade e para o campo: guias com exemplos calculados, fontes oficiais e calculadoras gratuitas.",
+  "id": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#065F46",
+  "background_color": "#F8FAFC",
+  "categories": ["finance", "education"],
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/android-chrome-maskable-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
