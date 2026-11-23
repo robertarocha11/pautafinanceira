@@ -1,133 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Poder dos Juros Compostos: Guia Completo e Simulador | Pauta Financeira</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: 0 auto; padding: 0 0 40px 0; background-color: #f9f9f9; }
-        
-        /* Cabeçalho exato com a identidade visual padrão */
-        header { background-color: #ffffff; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea; margin-bottom: 30px; }
-        .logo-area { display: flex; align-items: center; text-decoration: none; }
-        .logo-img { height: 38px; width: auto; margin-right: 12px; }
-        .logo-text { font-size: 22px; font-weight: bold; color: #1a1a1a; }
-        
-        nav { display: flex; gap: 25px; align-items: center; }
-        nav a { color: #333; text-decoration: none; font-size: 15px; font-weight: 500; padding-bottom: 4px; }
-        nav a:hover, nav a.active { color: #d35400; border-bottom: 2px solid #d35400; }
-
-        /* Container do Artigo no Formato Card */
-        .container { background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin: 0 20px; border: 1px solid #eaeaea; }
-        
-        .meta-info { font-size: 13px; color: #666; margin-bottom: 15px; }
-        
-        h1 { color: #1a1a1a; font-size: 32px; line-height: 1.2; margin-top: 0; margin-bottom: 20px; }
-        h2 { color: #004d40; margin-top: 35px; }
-        
-        .calculator { background: #e0f2f1; padding: 25px; border-radius: 6px; margin-top: 25px; border: 1px solid #b2dfdb; }
-        input { width: 100%; padding: 12px; margin: 8px 0 15px 0; border: 1px solid #80cbc4; border-radius: 4px; box-sizing: border-box; font-size: 15px; }
-        button { background-color: #00796b; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
-        button:hover { background-color: #004d40; }
-        .result { margin-top: 20px; font-weight: bold; color: #004d40; line-height: 1.6; font-size: 1.1em; }
-        blockquote { background: #f1f8e9; border-left: 4px solid #00796b; margin: 20px 0; padding: 12px 18px; color: #004d40; }
-        ul { margin-bottom: 20px; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juros compostos na prática: por que o tempo importa tanto | Pauta Financeira</title>
+  <meta name="description" content="Entenda juros simples e compostos com exemplos calculados: efeito do prazo, dos aportes mensais, regra dos 72, inflação, impostos e o peso dos juros nas dívidas.">
+  <link rel="canonical" href="https://www.pautafinanceira.com.br/financas/juros-compostos/">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:title" content="Juros compostos na prática: por que o tempo importa tanto">
+  <meta property="og:description" content="Exemplos com aportes mensais, prazo e o efeito dos juros nos investimentos e nas dívidas.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pautafinanceira.com.br/financas/juros-compostos/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png">
+  <meta name="theme-color" content="#065F46">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Juros compostos na prática: por que o tempo importa tanto",
+    "description": "Entenda juros simples e compostos com exemplos calculados: efeito do prazo, dos aportes mensais, regra dos 72, inflação, impostos e o peso dos juros nas dívidas.",
+    "inLanguage": "pt-BR",
+    "datePublished": "2026-11-18",
+    "dateModified": "2026-11-22",
+    "mainEntityOfPage": "https://www.pautafinanceira.com.br/financas/juros-compostos/",
+    "author": { "@type": "Organization", "name": "Redação Pauta Financeira" },
+    "publisher": { "@type": "Organization", "name": "Pauta Financeira", "url": "https://www.pautafinanceira.com.br/", "logo": { "@type": "ImageObject", "url": "https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png" } }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Juros compostos garantem ganho?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. Os exemplos usam taxas fixas e hipotéticas para mostrar o mecanismo. Na vida real, as taxas variam, existem impostos, tarifas e inflação, e alguns investimentos têm risco de perda de capital." }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde os juros compostos aparecem no dia a dia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Em aplicações de renda fixa, como Tesouro Direto e CDB, na poupança, em financiamentos, no cartão de crédito rotativo e no cheque especial. A diferença é que, nos investimentos, o mecanismo trabalha a seu favor e, nas dívidas, contra você." }
+      },
+      {
+        "@type": "Question",
+        "name": "É melhor aumentar o aporte ou o prazo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Depende do objetivo. O prazo costuma ter peso grande no resultado, como mostra o exemplo das duas pessoas, mas um aporte maior ajuda quando o prazo é curto. O ideal é combinar os dois dentro do que cabe no orçamento." }
+      },
+      {
+        "@type": "Question",
+        "name": "A regra dos 72 é exata?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. É uma aproximação útil para taxas moderadas. Para um cálculo preciso, use a fórmula dos juros compostos ou uma calculadora." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-    <!-- Cabeçalho idêntico ao modelo funcional do site -->
-    <header>
-        <a href="https://www.pautafinanceira.com.br/" class="logo-area">
-            <img src="https://www.pautafinanceira.com.br/assets/logo.png" alt="Pauta Financeira" class="logo-img" onerror="this.style.display='none'">
-            <span class="logo-text">Pauta Financeira</span>
-        </a>
-        <nav>
-            <a href="https://www.pautafinanceira.com.br/">Início</a>
-            <a href="https://www.pautafinanceira.com.br/#financas" class="active">Finanças</a>
-            <a href="https://www.pautafinanceira.com.br/#agronegocio">Agronegócio</a>
-            <a href="https://www.pautafinanceira.com.br/#ferramentas">Ferramentas</a>
-            <a href="https://www.pautafinanceira.com.br/#sobre">Sobre</a>
-        </nav>
-    </header>
+<header>
+  <div class="w">
+    <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
+      <img src="/assets/logo-pauta-financeira-icone.png" alt="" width="42" height="42" decoding="async" style="width:42px;height:42px;flex-shrink:0;object-fit:contain">
+      <span class="logo-texto">Pauta <b>Financeira</b></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="principal" id="menu-principal" aria-label="Principal">
+      <a href="/">Início</a>
+      <a href="/financas/" aria-current="page">Finanças</a>
+      <a href="/agronegocio/">Agronegócio</a>
+      <a href="/ferramentas/">Ferramentas</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Corpo do Artigo -->
-    <div class="container">
-        <div class="meta-info">Finanças pessoais · Publicado em 18/11/2026 · Atualizado em 18/11/2026 · 7 min de leitura · Por Redação Pauta Financeira</div>
+<main>
+<article class="artigo">
+  <h1>Juros compostos na prática: por que o tempo importa tanto</h1>
+  <p class="meta-topo">Finanças pessoais · Publicado em 18/11/2026 · Atualizado em 22/11/2026 · 7 min de leitura · Por Redação Pauta Financeira</p>
 
-        <h1>O Poder dos Juros Compostos nos Seus Investimentos</h1>
-        
-        <p>Os juros compostos são amplamente conhecidos como a <strong>"oitava maravilha do mundo"</strong>. Diferente dos juros simples — onde o rendimento incide apenas sobre o valor principal investido —, nos juros compostos os rendimentos de cada período são incorporados ao montante total. Em outras palavras, <strong>é o dinheiro gerando dinheiro sobre o dinheiro acumulado</strong>, criando uma curva de crescimento exponencial ao longo do tempo.</p>
-        
-        <p>Segundo orientações de planejamento financeiro publicadas por órgãos oficiais e instituições de educação de mercado (como a CVM - Comissão de Valores Mobiliários), o fator tempo é muito mais determinante para a construção de patrimônio do que o valor inicial investido.</p>
+  <p><strong>Resumo direto:</strong> juros compostos são os juros calculados sobre o valor inicial somado aos juros já acumulados. Por isso o crescimento acelera com o tempo: quanto mais longo o prazo, maior a parte do resultado que vem dos juros e não do dinheiro que você colocou. O mesmo mecanismo vale contra você nas dívidas, e é por isso que taxa alta e prazo longo formam uma combinação cara.</p>
 
-        <h2>Como Funcionam os Juros Compostos na Prática?</h2>
-        <p>Para entender o impacto real no seu bolso, imagine que você invista uma quantia e faça aportes mensais consistentes. No curto prazo, o crescimento pode parecer modesto. No entanto, à medida que os anos passam, a curva da riqueza se inclina acentuadamente para cima, superando em muito o total que você tirou do próprio bolso para investir.</p>
+  <p>Este guia compara juros simples e compostos com números, mostra o efeito do prazo e dos aportes mensais, explica a regra dos 72 e aponta os cuidados com inflação, impostos e dívidas. Todas as taxas dos exemplos são hipotéticas.</p>
 
-        <ul>
-            <li><strong>O Principal:</strong> É o valor que você efetivamente poupa e investe mensalmente.</li>
-            <li><strong>O Juro sobre Juro:</strong> É a mágica que faz com que os rendimentos passados trabalhem sozinhos para gerar novos ganhos no futuro.</li>
-            <li><strong>A Disciplina:</strong> A constância nos aportes regulares potencializa o efeito exponencial da taxa.</li>
-        </ul>
+  <div class="aviso"><strong>Conteúdo educativo.</strong> Este texto não é recomendação de investimento, nem de compra ou venda de ativos. Os resultados são simulações com taxa fixa e não garantem rendimento futuro.</div>
 
-        <blockquote>
-            💡 <strong>Regra de Ouro:</strong> Quanto antes você começa a investir, menor é o esforço mensal necessário para atingir a sua meta de liberdade financeira, graças ao tempo de maturação dos juros compostos.
-        </blockquote>
+  <h2>Juros simples e juros compostos: qual é a diferença</h2>
+  <p>Nos juros simples, a taxa incide sempre sobre o valor inicial. Nos juros compostos, ela incide sobre o saldo atualizado do período anterior, ou seja, há “juros sobre juros”. Veja o que acontece com R$ 10.000 a 10% ao ano:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Prazo</th><th>Juros simples</th><th>Juros compostos</th><th>Diferença</th></tr></thead>
+    <tbody>
+      <tr><td>10 anos</td><td>R$ 20.000</td><td>R$ 25.937</td><td>R$ 5.937</td></tr>
+      <tr><td>20 anos</td><td>R$ 30.000</td><td>R$ 67.275</td><td>R$ 37.275</td></tr>
+      <tr><td>30 anos</td><td>R$ 40.000</td><td>R$ 174.494</td><td>R$ 134.494</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Nos primeiros anos, a diferença é pequena. O efeito aparece com o prazo, porque a base sobre a qual a taxa incide cresce a cada período. A fórmula é simples:</p>
+  <p><strong>Montante = Capital × (1 + taxa)<sup>prazo</sup></strong></p>
 
-        <h2>Simulador de Juros Compostos</h2>
-        <div class="calculator">
-            <label for="valorInicial">Valor Inicial (R$):</label>
-            <input type="number" id="valorInicial" placeholder="Ex: 1000">
+  <h2>O efeito dos aportes mensais</h2>
+  <p>Quem investe todo mês soma duas fontes de crescimento: o dinheiro que coloca e os juros sobre o que já acumulou. Considere aportes de R$ 300 por mês, feitos no fim de cada mês, com taxa hipotética de 8% ao ano (cerca de 0,64% ao mês, de forma composta):</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Prazo</th><th>Total aportado</th><th>Valor estimado</th><th>Parte vinda dos juros</th></tr></thead>
+    <tbody>
+      <tr><td>10 anos</td><td>R$ 36.000</td><td>R$ 54.037</td><td>R$ 18.037</td></tr>
+      <tr><td>20 anos</td><td>R$ 72.000</td><td>R$ 170.700</td><td>R$ 98.700</td></tr>
+      <tr><td>30 anos</td><td>R$ 108.000</td><td>R$ 422.565</td><td>R$ 314.565</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Em 30 anos, cerca de 74% do valor final vem dos juros. Nos primeiros dez anos, essa fatia é de aproximadamente um terço. Isso mostra por que o início da jornada costuma parecer lento: o grosso do crescimento vem depois, quando o saldo acumulado já é grande.</p>
 
-            <label for="aporteMensal">Aporte Mensal (R$):</label>
-            <input type="number" id="aporteMensal" placeholder="Ex: 200">
+  <h2>Começar cedo pesa mais do que aportar mais tempo</h2>
+  <p>Imagine duas pessoas, ambas com aportes de R$ 300 por mês e taxa hipotética de 8% ao ano, até os 55 anos. A pessoa A começa aos 25, aporta por 10 anos (R$ 36.000 no total) e depois para, deixando o saldo render. A pessoa B começa aos 35 e aporta por 20 anos (R$ 72.000 no total).</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Pessoa</th><th>Quando aporta</th><th>Total aportado</th><th>Valor aos 55 anos</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>Dos 25 aos 35 anos</td><td>R$ 36.000</td><td>R$ 251.865</td></tr>
+      <tr><td>B</td><td>Dos 35 aos 55 anos</td><td>R$ 72.000</td><td>R$ 170.700</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>A pessoa A aportou metade do dinheiro e chegou a um valor cerca de 48% maior, porque o primeiro lote de aportes teve 20 anos extras para crescer. A lição é sobre o poder do tempo, e não um convite a parar de poupar: aportar por mais tempo e começar cedo é a combinação mais forte.</p>
 
-            <label for="taxaAnual">Taxa de Juros Anual (% a.a.):</label>
-            <input type="number" id="taxaAnual" value="10" placeholder="Ex: 10">
+  <h2>Regra dos 72: uma estimativa rápida</h2>
+  <p>Para estimar em quantos anos um valor dobra, divida 72 pela taxa anual em percentual. A 8% ao ano, o resultado é 9 anos. A 10% ao ano, cerca de 7,2 anos (o cálculo exato dá 7,3). É uma aproximação, útil para taxas moderadas, e serve para checar rapidamente se uma promessa de resultado faz sentido.</p>
 
-            <label for="tempoAnos">Tempo (Anos):</label>
-            <input type="number" id="tempoAnos" value="10" placeholder="Ex: 10">
+  <h2>Taxa mensal e taxa anual não se somam</h2>
+  <p>Uma taxa de 1% ao mês não equivale a 12% ao ano. Com capitalização composta, 1,01 elevado a 12 resulta em 1,1268, ou seja, 12,68% ao ano. Para converter uma taxa anual em mensal composta, use i = (1 + taxa anual)<sup>1/12</sup> − 1, que é o cálculo feito pela <a href="/ferramentas/#juros">calculadora de juros compostos</a> do site. Em contratos e produtos financeiros, confirme sempre se a taxa informada é mensal ou anual.</p>
 
-            <button onclick="calcularJurosCompostos()">Calcalcular Crescimento</button>
+  <h2>Juros compostos nas dívidas</h2>
+  <p>O mecanismo que ajuda quem investe prejudica quem deve. Se uma dívida de R$ 1.000 tem juros hipotéticos de 5% ao mês e não é paga por 12 meses, o saldo chega a R$ 1.795,86 (1.000 × 1,05<sup>12</sup>). Com juros simples, seria R$ 1.600. A diferença cresce a cada mês. Por isso, dívidas caras, como o rotativo do cartão e o cheque especial, costumam merecer prioridade sobre investimentos. Veja como isso funciona no guia sobre o <a href="/financas/divida-cartao-rotativo/">cartão de crédito rotativo</a>.</p>
 
-            <div class="result" id="resultadoJuros"></div>
-        </div>
+  <h2>O que reduz o resultado real</h2>
+  <p>Os exemplos acima são brutos. Três fatores diminuem o ganho efetivo:</p>
+  <ul>
+    <li><strong>Inflação:</strong> com rendimento de 10% ao ano e inflação de 4,5%, o ganho real é de cerca de 5,3% (1,10 ÷ 1,045 − 1), e não 10%.</li>
+    <li><strong>Imposto de renda:</strong> na renda fixa, ele incide sobre o rendimento, com alíquotas decrescentes de 22,5% a 15%, conforme o prazo. Veja os detalhes no guia de <a href="/financas/reserva-de-emergencia/">reserva de emergência</a>.</li>
+    <li><strong>Taxas e custos:</strong> taxa de administração de fundos, taxa de custódia e tarifas reduzem o saldo ao longo do tempo.</li>
+  </ul>
 
-        <h2>Perguntas Frequentes (FAQ)</h2>
-        <ul>
-            <li><strong>Onde os juros compostos acontecem de verdade?</strong> Em aplicações de renda fixa atreladas à taxa Selic ou ao CDI (como o Tesouro Direto e CDBs), bem como em fundos imobiliários e ações através do reinvestimento de dividendos.</li>
-            <li><strong>O que é mais importante: a taxa ou o tempo?</strong> O tempo! Deixar o dinheiro investido por mais anos gera um resultado final muito superior a buscar investimentos de curtíssimo prazo com riscos excessivos.</li>
-        </ul>
-    </div>
+  <h2>Erros comuns</h2>
+  <ul>
+    <li>Usar uma taxa irreal nas simulações, o que cria expectativas que o mercado não entrega.</li>
+    <li>Ignorar inflação e impostos e comparar apenas números brutos.</li>
+    <li>Confundir taxa nominal com taxa efetiva, ou mensal com anual.</li>
+    <li>Interromper os aportes cedo, justamente quando o efeito composto começa a aparecer.</li>
+    <li>Aplicar em ativos de longo prazo ou de grande oscilação o dinheiro que será necessário em pouco tempo.</li>
+    <li>Investir antes de montar a reserva e de quitar dívidas caras.</li>
+  </ul>
 
-    <script>
-        function calcularJurosCompostos() {
-            const vp = parseFloat(document.getElementById('valorInicial').value) || 0;
-            const pmt = parseFloat(document.getElementById('aporteMensal').value) || 0;
-            const taxaAnual = parseFloat(document.getElementById('taxaAnual').value) || 0;
-            const anos = parseInt(document.getElementById('tempoAnos').value) || 0;
-            const resultado = document.getElementById('resultadoJuros');
+  <h2>Teste os seus números</h2>
+  <p>A <a href="/ferramentas/#juros">calculadora de juros compostos com aportes mensais</a> usa a mesma lógica deste guia. Com os valores iniciais da ferramenta (R$ 1.000 de partida, R$ 200 por mês, 10% ao ano, durante 120 meses), o resultado estimado é de R$ 42.567 para R$ 25.000 investidos, ou seja, R$ 17.567 de rendimento. Troque pelos seus números e compare cenários com taxas menores, para ver o quanto o resultado muda.</p>
 
-            if (anos <= 0) {
-                resultado.innerHTML = "Por favor, insira um prazo em anos válido.";
-                return;
-            }
+  <h2>Fontes e referências</h2>
+  <ul>
+    <li>Banco Central do Brasil: taxa Selic, estatísticas de juros e material de educação financeira (<a href="https://www.bcb.gov.br" rel="noopener">bcb.gov.br</a>).</li>
+    <li>Portal do Investidor, da Comissão de Valores Mobiliários: conceitos básicos de investimento (<a href="https://www.investidor.gov.br" rel="noopener">investidor.gov.br</a>).</li>
+    <li>Tesouro Direto (Tesouro Nacional e B3): títulos públicos e simuladores (<a href="https://www.tesourodireto.com.br" rel="noopener">tesourodireto.com.br</a>).</li>
+    <li>Receita Federal: tributação de aplicações financeiras (<a href="https://www.gov.br/receitafederal" rel="noopener">gov.br/receitafederal</a>).</li>
+  </ul>
 
-            const i = (taxaAnual / 100) / 12;
-            const n = anos * 12;
+  <h2>Perguntas frequentes</h2>
+  <h3>Juros compostos garantem ganho?</h3>
+  <p>Não. Os exemplos usam taxas fixas e hipotéticas para mostrar o mecanismo. Na vida real, as taxas variam, existem impostos, tarifas e inflação, e alguns investimentos têm risco de perda de capital.</p>
+  <h3>Onde os juros compostos aparecem no dia a dia?</h3>
+  <p>Em aplicações de renda fixa, como Tesouro Direto e CDB, na poupança, em financiamentos, no cartão de crédito rotativo e no cheque especial. A diferença é que, nos investimentos, o mecanismo trabalha a seu favor e, nas dívidas, contra você.</p>
+  <h3>É melhor aumentar o aporte ou o prazo?</h3>
+  <p>Depende do objetivo. O prazo costuma ter peso grande no resultado, como mostra o exemplo das duas pessoas, mas um aporte maior ajuda quando o prazo é curto. O ideal é combinar os dois dentro do que cabe no orçamento.</p>
+  <h3>A regra dos 72 é exata?</h3>
+  <p>Não. É uma aproximação útil para taxas moderadas. Para um cálculo preciso, use a fórmula dos juros compostos ou uma calculadora.</p>
 
-            let montante = vp;
-            for (let t = 1; t <= n; t++) {
-                montante = (montante + pmt) * (1 + i);
-            }
+  <div class="autor"><strong>Por Redação Pauta Financeira.</strong> Texto educativo, produzido a partir de fontes oficiais e revisado em 22/11/2026. Encontrou algum erro ou tem uma sugestão? Fale conosco pela página de <a href="/contato/">contato</a>. Saiba como produzimos os textos em <a href="/sobre/">Sobre</a>.</div>
+</article>
+</main>
 
-            const totalInvestido = vp + (pmt * n);
-            const jurosAcumulados = montante - totalInvestido;
+<footer>
+  <div class="w">
+    <p>© 2026 Pauta Financeira. Conteúdo educativo; não constitui recomendação de investimento, compra ou venda de ativos.</p>
+    <p>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/termos/">Termos e aviso financeiro</a>
+      <a href="/contato/">Contato</a>
+      <a href="#" id="pf-cookies">Gerenciar cookies</a>
+    </p>
+  </div>
+</footer>
 
-            resultado.innerHTML = `Montante Final Acumulado: R$ ${montante.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
-                                  `Total Investido do seu bolso: R$ ${totalInvestido.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
-                                  `Rendimento Total de Juros: R$ ${jurosAcumulados.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        }
-    </script>
+<div id="cookie-banner" class="cookies" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos armazenamento local para lembrar a sua escolha. Saiba mais na <a href="/privacidade/">Política de Privacidade</a>.</p>
+  <button id="cookie-aceitar" class="ok">Aceitar</button>
+  <button id="cookie-recusar" class="nao">Recusar</button>
+</div>
+
+<script src="/script.js" defer></script>
 </body>
 </html>
