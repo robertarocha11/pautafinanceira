@@ -1,61 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dívida do Cartão Rotativo: Como sair dessa armadilha</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fcf4f4; }
-        h1, h2 { color: #c62828; }
-        .container { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .calculator { background: #ffebee; padding: 20px; border-radius: 6px; margin-top: 20px; }
-        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        button { background-color: #d32f2f; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
-        button:hover { background-color: #b71c1c; }
-        .result { margin-top: 15px; font-weight: bold; color: #b71c1c; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartão de crédito rotativo: como o juro cresce e como sair dele | Pauta Financeira</title>
+  <meta name="description" content="Como o rotativo do cartão cobra juros compostos, com tabela mês a mês de uma dívida hipotética, o teto de 100%, comparação com empréstimo e plano prático de 90 dias.">
+  <link rel="canonical" href="https://www.pautafinanceira.com.br/financas/divida-cartao-rotativo/">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:title" content="Cartão de crédito rotativo: como o juro cresce e como sair dele">
+  <meta property="og:description" content="Tabela mês a mês, teto de 100%, comparação de alternativas e plano prático para sair do rotativo.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pautafinanceira.com.br/financas/divida-cartao-rotativo/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png">
+  <meta name="theme-color" content="#065F46">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cartão de crédito rotativo: como o juro cresce e como sair dele",
+    "description": "Como o rotativo do cartão cobra juros compostos, com tabela mês a mês de uma dívida hipotética, o teto de 100%, comparação com empréstimo e plano prático de 90 dias.",
+    "inLanguage": "pt-BR",
+    "datePublished": "2026-11-18",
+    "dateModified": "2026-11-23",
+    "mainEntityOfPage": "https://www.pautafinanceira.com.br/financas/divida-cartao-rotativo/",
+    "author": { "@type": "Organization", "name": "Redação Pauta Financeira" },
+    "publisher": { "@type": "Organization", "name": "Pauta Financeira", "url": "https://www.pautafinanceira.com.br/", "logo": { "@type": "ImageObject", "url": "https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png" } }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pagar só o valor mínimo da fatura resolve?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. O que não for pago vira dívida no rotativo ou no parcelamento da fatura, com juros. Pagar o mínimo apenas adia o problema e aumenta o custo total." }
+      },
+      {
+        "@type": "Question",
+        "name": "O teto de 100% vale para qualquer dívida?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A regra vale para o rotativo e para o parcelamento da fatura do cartão. Outras modalidades, como empréstimo pessoal e cheque especial, têm regras próprias. Confirme as condições do seu contrato." }
+      },
+      {
+        "@type": "Question",
+        "name": "Devo pegar um empréstimo para quitar o cartão?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Pode fazer sentido quando a taxa do empréstimo é bem menor e a parcela cabe no orçamento, mas é preciso comparar o custo efetivo total das duas opções e evitar voltar a usar o cartão. Este texto é educativo e não é recomendação de crédito." }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso levar a dívida do cartão para outro banco?",
+        "acceptedAnswer": { "@type": "Answer", "text": "As regras do Conselho Monetário Nacional preveem a portabilidade do saldo devedor do cartão. Pergunte à instituição que oferece a proposta como solicitar e compare o custo total antes de decidir." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <h1>O Perigo do Cartão Rotativo e Como Quitar sua Dívida</h1>
-        <p>O crédito rotativo do cartão é uma das linhas de juros mais altas do mercado financeiro. Pagar apenas o "mínimo" da fatura faz a dívida se multiplicar rapidamente em poucos meses.</p>
-        
-        <h2>Simulador de Crescimento da Dívida (Rotativo)</h2>
-        <div class="calculator">
-            <label for="divida">Valor da Dívida Atual (R$):</label>
-            <input type="number" id="divida" placeholder="Ex: 2000">
 
-            <label for="juros">Taxa de Juros Mensal Média (% ao mês):</label>
-            <input type="number" id="juros" value="14" placeholder="Ex: 14">
+<header>
+  <div class="w">
+    <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
+      <img src="/assets/logo-pauta-financeira-icone.png" alt="" width="42" height="42" decoding="async" style="width:42px;height:42px;flex-shrink:0;object-fit:contain">
+      <span class="logo-texto">Pauta <b>Financeira</b></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="principal" id="menu-principal" aria-label="Principal">
+      <a href="/">Início</a>
+      <a href="/financas/" aria-current="page">Finanças</a>
+      <a href="/agronegocio/">Agronegócio</a>
+      <a href="/ferramentas/">Ferramentas</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
 
-            <label for="meses">Quantos meses sem pagar o total:</label>
-            <input type="number" id="meses" value="3">
+<main>
+<article class="artigo">
+  <h1>Cartão de crédito rotativo: como o juro cresce e como sair dele</h1>
+  <p class="meta-topo">Finanças pessoais · Publicado em 18/11/2026 · Atualizado em 23/11/2026 · 7 min de leitura · Por Redação Pauta Financeira</p>
 
-            <button onclick="calcularRotativo()">Calcular Dívida Acumulada</button>
+  <p><strong>Resumo direto:</strong> o rotativo é a dívida que surge quando a fatura do cartão não é paga por inteiro. Ele cobra juros compostos, entre os mais altos do mercado, e o saldo cresce rapidamente. Desde janeiro de 2024, há um teto: os juros e encargos do rotativo e do parcelamento da fatura somados não podem passar do valor original da dívida. Mesmo assim, uma dívida que dobra continua sendo muito cara, e sair dela exige comparar alternativas e seguir um plano.</p>
 
-            <div class="result" id="resultado"></div>
-        </div>
+  <p>Este guia mostra, com uma dívida hipotética, como o saldo evolui mês a mês, o que o teto de 100% muda na prática, como comparar o rotativo com um parcelamento ou um empréstimo e um plano de 90 dias para organizar a saída. Todas as taxas dos exemplos são hipotéticas.</p>
+
+  <div class="aviso"><strong>Conteúdo educativo.</strong> Este texto não é recomendação de crédito, de investimento ou de renegociação com uma instituição específica. As taxas reais variam por banco, perfil e época, e as regras podem mudar. Confira as condições vigentes nas fontes oficiais ao final.</div>
+
+  <h2>Como o rotativo funciona</h2>
+  <p>Quando a fatura vence e você paga menos do que o total, o valor restante entra no crédito rotativo. A partir daí, incidem juros sobre o saldo devedor, e os juros do mês seguinte incidem sobre o saldo já acrescido dos juros anteriores. É o mesmo mecanismo explicado no guia de <a href="/financas/juros-compostos/">juros compostos</a>, só que agora trabalhando contra você, e com uma taxa muito mais alta do que a de investimentos ou da maioria dos empréstimos. O Banco Central divulga as taxas médias praticadas por modalidade de crédito, e o rotativo costuma aparecer entre as mais elevadas.</p>
+  <p>Uma taxa de 14% ao mês, usada aqui como hipótese, equivale a cerca de 381,8% ao ano (1,14 elevado a 12, menos 1). É por isso que comparar apenas o número mensal engana: o efeito composto é muito maior do que parece.</p>
+
+  <h2>O teto de 100% e o que ele muda</h2>
+  <p>Desde 3 de janeiro de 2024, com base na Lei nº 14.690/2023 e na regulamentação do Conselho Monetário Nacional, o total cobrado a título de juros e encargos no rotativo e no parcelamento da fatura não pode exceder o valor original da dívida. Em outras palavras, a dívida pode, no máximo, dobrar. Veja uma dívida hipotética de R$ 1.000 com juros de 14% ao mês, sem nenhum pagamento:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Mês</th><th>Saldo sem teto</th><th>Saldo com teto de 100%</th><th>Juros acumulados (com teto)</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>R$ 1.000,00</td><td>R$ 1.000,00</td><td>R$ 0,00</td></tr>
+      <tr><td>1</td><td>R$ 1.140,00</td><td>R$ 1.140,00</td><td>R$ 140,00</td></tr>
+      <tr><td>2</td><td>R$ 1.299,60</td><td>R$ 1.299,60</td><td>R$ 299,60</td></tr>
+      <tr><td>3</td><td>R$ 1.481,54</td><td>R$ 1.481,54</td><td>R$ 481,54</td></tr>
+      <tr><td>4</td><td>R$ 1.688,96</td><td>R$ 1.688,96</td><td>R$ 688,96</td></tr>
+      <tr><td>5</td><td>R$ 1.925,41</td><td>R$ 1.925,41</td><td>R$ 925,41</td></tr>
+      <tr><td>6</td><td>R$ 2.194,97</td><td>R$ 2.000,00</td><td>R$ 1.000,00</td></tr>
+      <tr><td>12</td><td>R$ 4.817,90</td><td>R$ 2.000,00</td><td>R$ 1.000,00</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Sem o teto, a dívida de R$ 1.000 passaria de R$ 4.800 em um ano. Com o teto, ela para em R$ 2.000. A regra protege contra a bola de neve, mas é preciso ler o resultado com cuidado: 100% de juros ainda é um custo altíssimo, e em seis meses, no exemplo, o teto já é atingido. O teto também não impede que a dívida cresça rápido até chegar nele. Se houver renegociação, peça ao banco a evolução detalhada do débito e confira se o limite está sendo respeitado sobre o valor original.</p>
+
+  <h2>Comparando alternativas</h2>
+  <p>Antes de deixar a dívida correr, vale comparar o custo total de cada saída. Considere uma dívida hipotética de R$ 3.000 e as seguintes opções, todas com taxas ilustrativas:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Opção</th><th>Taxa hipotética</th><th>Parcela</th><th>Total pago</th><th>Juros</th></tr></thead>
+    <tbody>
+      <tr><td>Rotativo, sem pagar por 12 meses</td><td>14% ao mês</td><td>Nenhuma</td><td>R$ 6.000,00 (teto)</td><td>R$ 3.000,00</td></tr>
+      <tr><td>Parcelamento da fatura em 12 vezes</td><td>8% ao mês</td><td>R$ 398,09</td><td>R$ 4.777,02</td><td>R$ 1.777,02</td></tr>
+      <tr><td>Empréstimo pessoal em 12 vezes</td><td>4% ao mês</td><td>R$ 319,66</td><td>R$ 3.835,88</td><td>R$ 835,88</td></tr>
+      <tr><td>Empréstimo pessoal em 6 vezes</td><td>4% ao mês</td><td>R$ 572,29</td><td>R$ 3.433,71</td><td>R$ 433,71</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>As parcelas foram calculadas pelo sistema de parcelas fixas, o mesmo da <a href="/ferramentas/#financiamento">calculadora de financiamento</a> do site. Repare em dois pontos. Primeiro, prazos mais curtos custam menos em juros, mas exigem parcela maior. Segundo, a melhor opção não é a de menor parcela, e sim a de menor custo total que cabe no seu orçamento. Compare sempre o custo efetivo total (CET), que inclui tarifas, seguros e IOF, e não apenas a taxa de juros.</p>
+  <p>O Conselho Monetário Nacional também instituiu a portabilidade do saldo devedor do cartão, que permite transferir a dívida para outra instituição com condições diferentes. Pergunte à instituição que faz a proposta como solicitar e compare o custo total antes de decidir.</p>
+
+  <h2>Plano de 90 dias para sair do rotativo</h2>
+  <h3>Dias 1 a 7: enxergue a dívida inteira</h3>
+  <p>Reúna as faturas e anote, para cada cartão ou conta, o saldo, a taxa mensal e o valor mínimo. O Banco Central oferece o Registrato, serviço que mostra as dívidas e operações de crédito registradas no seu CPF. Some tudo em um único número e ordene as dívidas da mais cara para a mais barata.</p>
+  <h3>Dias 8 a 30: pare o crescimento</h3>
+  <p>Suspenda novas compras no cartão que está no rotativo e corte gastos variáveis para liberar caixa. Monte um <a href="/financas/orcamento-50-30-20/">orçamento</a> simples e defina quanto sobra por mês. No exemplo da dívida de R$ 3.000, liberar cerca de R$ 400 mensais já cobriria a parcela de R$ 398,09 do parcelamento, no limite, ou a de R$ 319,66 do empréstimo, com mais folga. Em seguida, peça propostas de parcelamento ou de portabilidade e compare o custo total.</p>
+  <h3>Dias 31 a 60: troque a dívida cara por uma previsível</h3>
+  <p>Feche a opção de menor custo total que cabe no orçamento e pague a parcela em dia, de preferência com débito automático. Mantenha uma reserva mínima, como um mês de despesas essenciais, para que um imprevisto não leve de volta ao rotativo. O guia de <a href="/financas/reserva-de-emergencia/">reserva de emergência</a> mostra como calcular esse valor.</p>
+  <h3>Dias 61 a 90: consolide o hábito</h3>
+  <p>Revise o orçamento, use o dinheiro de qualquer sobra para antecipar parcelas, quando o contrato permitir o abatimento de juros, e passe a pagar a fatura por inteiro. A partir daí, o objetivo é não voltar ao rotativo: use o cartão como meio de pagamento, e não como extensão da renda.</p>
+
+  <h2>Simule a evolução da sua dívida</h2>
+  <div class="calc">
+    <div class="campos">
+      <div><label for="rDivida">Valor da dívida (R$)</label><input type="number" id="rDivida" min="0" step="0.01" value="1000"></div>
+      <div><label for="rTaxa">Juros mensais (%)</label><input type="number" id="rTaxa" min="0" step="0.01" value="14"></div>
+      <div><label for="rMeses">Meses sem pagar</label><input type="number" id="rMeses" min="1" step="1" value="6"></div>
     </div>
+    <button type="button" class="acao" id="rBtn">Calcular</button>
+    <div class="resultado" id="rRes" role="status" aria-live="polite"></div>
+    <p class="ajuda">Simulação educativa com taxa fixa, sem IOF e sem tarifas. O teto considera juros e encargos de até 100% do valor original da dívida. Confira o seu contrato e a sua fatura.</p>
+  </div>
 
-    <script>
-        function calcularRotativo() {
-            const divida = parseFloat(document.getElementById('divida').value) || 0;
-            const taxaMensal = parseFloat(document.getElementById('juros').value) || 0;
-            const meses = parseInt(document.getElementById('meses').value) || 0;
-            const resultado = document.getElementById('resultado');
+  <h2>Erros comuns</h2>
+  <ul>
+    <li><strong>Pagar só o mínimo</strong> e achar que a dívida está sob controle.</li>
+    <li><strong>Comparar apenas a parcela,</strong> sem olhar o custo total e o prazo.</li>
+    <li><strong>Trocar a dívida e continuar usando o cartão,</strong> criando uma nova dívida em cima da anterior.</li>
+    <li><strong>Esperar para agir:</strong> cada mês parado aumenta o saldo até o teto.</li>
+    <li><strong>Aceitar a primeira proposta</strong> sem pedir a evolução detalhada do débito e sem comparar com outra instituição.</li>
+  </ul>
 
-            if (divida <= 0 || meses <= 0) {
-                resultado.innerHTML = "Por favor, insira valores válidos.";
-                return;
-            }
+  <h2>Fontes e referências</h2>
+  <ul>
+    <li>Banco Central do Brasil: taxas médias de juros por modalidade, normas do Conselho Monetário Nacional sobre o cartão de crédito e o serviço Registrato (<a href="https://www.bcb.gov.br" rel="noopener">bcb.gov.br</a>).</li>
+    <li>Presidência da República: texto da Lei nº 14.690/2023, que trata do teto de juros do rotativo e do parcelamento da fatura (<a href="https://www.planalto.gov.br" rel="noopener">planalto.gov.br</a>).</li>
+    <li>Consumidor.gov.br: canal oficial para registrar reclamações contra empresas (<a href="https://www.consumidor.gov.br" rel="noopener">consumidor.gov.br</a>).</li>
+    <li>Portal do Investidor, da Comissão de Valores Mobiliários: educação financeira (<a href="https://www.investidor.gov.br" rel="noopener">investidor.gov.br</a>).</li>
+  </ul>
 
-            const i = taxaMensal / 100;
-            const montante = divida * Math.pow(1 + i, meses);
-            const jurosAcumulados = montante - divida;
+  <h2>Perguntas frequentes</h2>
+  <h3>Pagar só o valor mínimo da fatura resolve?</h3>
+  <p>Não. O que não for pago vira dívida no rotativo ou no parcelamento da fatura, com juros. Pagar o mínimo apenas adia o problema e aumenta o custo total.</p>
+  <h3>O teto de 100% vale para qualquer dívida?</h3>
+  <p>A regra vale para o rotativo e para o parcelamento da fatura do cartão. Outras modalidades, como empréstimo pessoal e cheque especial, têm regras próprias. Confirme as condições do seu contrato.</p>
+  <h3>Devo pegar um empréstimo para quitar o cartão?</h3>
+  <p>Pode fazer sentido quando a taxa do empréstimo é bem menor e a parcela cabe no orçamento, mas é preciso comparar o custo efetivo total das duas opções e evitar voltar a usar o cartão. Este texto é educativo e não é recomendação de crédito.</p>
+  <h3>Posso levar a dívida do cartão para outro banco?</h3>
+  <p>As regras do Conselho Monetário Nacional preveem a portabilidade do saldo devedor do cartão. Pergunte à instituição que oferece a proposta como solicitar e compare o custo total antes de decidir.</p>
 
-            resultado.innerHTML = `Valor da Dívida após ${meses} meses: R$ ${montante.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
-                                  `Somente de Juros Acumulados: R$ ${jurosAcumulados.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        }
-    </script>
+  <div class="autor"><strong>Por Redação Pauta Financeira.</strong> Texto educativo, produzido a partir de fontes oficiais e revisado em 23/11/2026. Encontrou algum erro ou tem uma sugestão? Fale conosco pela página de <a href="/contato/">contato</a>. Saiba como produzimos os textos em <a href="/sobre/">Sobre</a>.</div>
+</article>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 Pauta Financeira. Conteúdo educativo; não constitui recomendação de investimento, compra ou venda de ativos.</p>
+    <p>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/termos/">Termos e aviso financeiro</a>
+      <a href="/contato/">Contato</a>
+      <a href="#" id="pf-cookies">Gerenciar cookies</a>
+    </p>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookies" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos armazenamento local para lembrar a sua escolha. Saiba mais na <a href="/privacidade/">Política de Privacidade</a>.</p>
+  <button id="cookie-aceitar" class="ok">Aceitar</button>
+  <button id="cookie-recusar" class="nao">Recusar</button>
+</div>
+
+<script src="/script.js" defer></script>
+<script>
+(function () {
+  var btn = document.getElementById('rBtn');
+  if (!btn) return;
+  function brl(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  btn.addEventListener('click', function () {
+    var d = parseFloat(document.getElementById('rDivida').value);
+    var t = parseFloat(document.getElementById('rTaxa').value);
+    var n = parseInt(document.getElementById('rMeses').value, 10);
+    var res = document.getElementById('rRes');
+    res.style.display = 'block';
+    if (isNaN(d) || d <= 0 || isNaN(t) || t < 0 || isNaN(n) || n < 1 || n > 600) {
+      res.innerHTML = 'Informe uma dívida maior que zero, uma taxa válida e entre 1 e 600 meses.';
+      return;
+    }
+    var semTeto = d * Math.pow(1 + t / 100, n);
+    var comTeto = Math.min(semTeto, d * 2);
+    var texto = '<strong>Saldo sem teto: ' + brl(semTeto) + '</strong><br>' +
+      '<strong>Saldo com teto de 100%: ' + brl(comTeto) + '</strong><br>' +
+      'Juros acumulados com teto: ' + brl(comTeto - d) + '.';
+    if (semTeto > d * 2) {
+      texto += '<br>Nesta simulação, o teto de 100% foi atingido.';
+    }
+    res.innerHTML = texto;
+  });
+})();
+</script>
 </body>
 </html>
