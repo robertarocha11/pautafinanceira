@@ -1,64 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custo de Produção Rural: Como calcular na sua fazenda</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f6f0; }
-        h1, h2 { color: #2e7d32; }
-        .container { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .calculator { background: #e8f5e9; padding: 20px; border-radius: 6px; margin-top: 20px; }
-        input { width: 100%; padding: 10px; margin: 8px 0 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        button { background-color: #388e3c; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
-        button:hover { background-color: #2e7d32; }
-        .result { margin-top: 15px; font-weight: bold; color: #1b5e20; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custo de produção rural: como calcular e o que ele revela | Pauta Financeira</title>
+  <meta name="description" content="Como calcular o custo de produção rural com exemplo de 100 hectares: custos fixos e variáveis, custo por unidade, preço mínimo, produtividade de equilíbrio e efeito da área.">
+  <link rel="canonical" href="https://www.pautafinanceira.com.br/agronegocio/custo-producao-rural/">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:title" content="Custo de produção rural: como calcular e o que ele revela">
+  <meta property="og:description" content="Custo por unidade, preço mínimo de equilíbrio e produtividade mínima, com exemplo calculado.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pautafinanceira.com.br/agronegocio/custo-producao-rural/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png">
+  <meta name="theme-color" content="#065F46">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Custo de produção rural: como calcular e o que ele revela",
+    "description": "Como calcular o custo de produção rural com exemplo de 100 hectares: custos fixos e variáveis, custo por unidade, preço mínimo, produtividade de equilíbrio e efeito da área.",
+    "inLanguage": "pt-BR",
+    "datePublished": "2026-11-18",
+    "dateModified": "2026-11-22",
+    "mainEntityOfPage": "https://www.pautafinanceira.com.br/agronegocio/custo-producao-rural/",
+    "author": { "@type": "Organization", "name": "Redação Pauta Financeira" },
+    "publisher": { "@type": "Organization", "name": "Pauta Financeira", "url": "https://www.pautafinanceira.com.br/", "logo": { "@type": "ImageObject", "url": "https://www.pautafinanceira.com.br/assets/logo-pauta-financeira.png" } }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Devo calcular o custo por hectare ou por unidade produzida?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Os dois. O custo por hectare mostra quanto se investe na área, e o custo por unidade, como a saca, relaciona esse investimento à produtividade. Comparar lavouras só pelo custo por hectare pode esconder diferenças de rendimento." }
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso incluir o valor da terra própria no custo?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Para uma análise completa, vale considerar o custo de oportunidade, que é quanto a terra e o capital próprio renderiam em outro uso, como o arrendamento. Ele não é um desembolso, mas ajuda a avaliar se a atividade compensa em relação a alternativas." }
+      },
+      {
+        "@type": "Question",
+        "name": "Como estimar a produtividade de equilíbrio?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divida o custo total pelo preço de venda esperado multiplicado pela área. O resultado indica quantas unidades por hectare a lavoura precisa produzir para cobrir os custos naquele preço." }
+      },
+      {
+        "@type": "Question",
+        "name": "Com que frequência devo recalcular o custo de produção?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A cada safra e sempre que houver mudança relevante nos preços de insumos, no arrendamento, nos juros ou na produtividade esperada. Atualizar durante o ciclo ajuda a corrigir a rota antes da colheita." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Gestão no Campo: Entendendo o Custo de Produção Rural</h1>
-        <p>Controlar os custos operacionais e fixos é a diferença entre uma safra lucrativa e o prejuízo. Conhecer cada centavo investido por hectare garante segurança nas decisões de venda.</p>
-        
-        <h2>Calculadora Básica de Custo por Hectare</h2>
-        <div class="calculator">
-            <label for="insumos">Custo com Insumos (Sementes, Adubos, Defensivos) (R$):</label>
-            <input type="number" id="insumos" placeholder="Ex: 1500">
 
-            <label for="operacionais">Custos Operacionais (Maquinário, Diesel, Mão de obra) (R$):</label>
-            <input type="number" id="operacionais" placeholder="Ex: 800">
+<header>
+  <div class="w">
+    <a class="logo" href="/" aria-label="Pauta Financeira, página inicial">
+      <img src="/assets/logo-pauta-financeira-icone.png" alt="" width="42" height="42" decoding="async" style="width:42px;height:42px;flex-shrink:0;object-fit:contain">
+      <span class="logo-texto">Pauta <b>Financeira</b></span>
+    </a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav class="principal" id="menu-principal" aria-label="Principal">
+      <a href="/">Início</a>
+      <a href="/financas/">Finanças</a>
+      <a href="/agronegocio/" aria-current="page">Agronegócio</a>
+      <a href="/ferramentas/">Ferramentas</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </div>
+</header>
 
-            <label for="outros">Outros Custos (Impostos, Arrendamento, Frete) (R$):</label>
-            <input type="number" id="outros" placeholder="Ex: 400">
+<main>
+<article class="artigo">
+  <h1>Custo de produção rural: como calcular e o que ele revela</h1>
+  <p class="meta-topo">Agronegócio · Publicado em 18/11/2026 · Atualizado em 22/11/2026 · 7 min de leitura · Por Redação Pauta Financeira</p>
 
-            <label for="area">Área Total Plantada (Hectares):</label>
-            <input type="number" id="area" placeholder="Ex: 50">
+  <p><strong>Resumo direto:</strong> o custo de produção é tudo o que a lavoura consome para gerar a safra, dividido pelo que ela produz. Conhecer o custo por unidade, como a saca, mostra o preço mínimo de equilíbrio, a produtividade mínima que a lavoura precisa entregar e se aumentar a área compensa. Sem esse número, decidir quando vender ou quanto financiar vira palpite.</p>
 
-            <button onclick="calcularCustoRural()">Calcular Custo Total</button>
+  <p>Este guia mostra como separar custos fixos e variáveis, como chegar ao custo por unidade com um exemplo de 100 hectares, como testar cenários de preço e produtividade e por que o tamanho da área muda o resultado. Todos os valores são hipotéticos.</p>
 
-            <div class="result" id="resultado"></div>
-        </div>
-    </div>
+  <div class="aviso"><strong>Conteúdo educativo.</strong> Custos, preços e produtividade variam por região, cultura e safra. Os números abaixo servem para ilustrar o raciocínio e não são recomendação de plantio, de venda ou de contratação de crédito.</div>
 
-    <script>
-        function calcularCustoRural() {
-            const insumos = parseFloat(document.getElementById('insumos').value) || 0;
-            const operacionais = parseFloat(document.getElementById('operacionais').value) || 0;
-            const outros = parseFloat(document.getElementById('outros').value) || 0;
-            const area = parseFloat(document.getElementById('area').value) || 0;
-            const resultado = document.getElementById('resultado');
+  <h2>O que entra no custo de produção</h2>
+  <p>Os custos costumam ser divididos em dois grupos, o que facilita a análise:</p>
+  <ul>
+    <li><strong>Custos variáveis:</strong> mudam com a área plantada. Incluem sementes, fertilizantes, defensivos, combustível, mão de obra temporária, frete, secagem e juros do custeio.</li>
+    <li><strong>Custos fixos:</strong> não mudam, no curto prazo, se a área aumenta ou diminui. Incluem depreciação de máquinas e benfeitorias, mão de obra permanente, seguros, impostos fixos e administração.</li>
+  </ul>
+  <p>Há ainda o custo de oportunidade, que é o quanto a terra e o capital próprio renderiam em outro uso, como o arrendamento. Ele não é um desembolso e costuma ficar de fora das contas simples, mas é importante para saber se a atividade compensa em relação às alternativas.</p>
 
-            if (area <= 0) {
-                resultado.innerHTML = "Por favor, insira uma área plantada válida maior que zero.";
-                return;
-            }
+  <h2>Exemplo calculado: lavoura de 100 hectares</h2>
+  <p>Considere uma lavoura hipotética de 100 hectares, com custos fixos de R$ 150.000 na safra, custos variáveis de R$ 2.000 por hectare e produtividade de 60 unidades por hectare (por exemplo, sacas):</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Item</th><th>Cálculo</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td>Custos fixos</td><td>Valor da safra</td><td>R$ 150.000</td></tr>
+      <tr><td>Custos variáveis</td><td>R$ 2.000 × 100 ha</td><td>R$ 200.000</td></tr>
+      <tr><td><strong>Custo total</strong></td><td>150.000 + 200.000</td><td><strong>R$ 350.000</strong></td></tr>
+      <tr><td>Custo por hectare</td><td>350.000 ÷ 100</td><td>R$ 3.500</td></tr>
+      <tr><td>Produção total</td><td>60 × 100 ha</td><td>6.000 unidades</td></tr>
+      <tr><td><strong>Custo por unidade</strong></td><td>350.000 ÷ 6.000</td><td><strong>R$ 58,33</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p><strong>Custo total = custos fixos + (custo variável por hectare × área)</strong></p>
+  <p><strong>Custo por unidade = custo total ÷ (produtividade × área)</strong></p>
+  <p>O custo por unidade de R$ 58,33 é o preço mínimo de equilíbrio: abaixo dele, a lavoura gera prejuízo, ainda que não existam outras despesas.</p>
 
-            const custoTotal = insumos + operacionais + outros;
-            const custoPorHectare = custoTotal / area;
+  <h2>Preço mínimo e produtividade mínima de equilíbrio</h2>
+  <p>Suponha um preço de venda hipotético de R$ 90 por unidade. A receita seria de R$ 540.000 (6.000 × R$ 90), e o resultado, de R$ 190.000 antes de impostos e despesas não listadas. A margem por unidade é de R$ 31,67 (90 − 58,33).</p>
+  <p>Outra pergunta útil é quanto a lavoura precisa produzir para cobrir os custos nesse preço:</p>
+  <p><strong>Produtividade mínima = custo total ÷ (preço × área)</strong></p>
+  <p>No exemplo, 350.000 ÷ (90 × 100) resulta em 38,89 unidades por hectare. A lavoura pode perder cerca de 35% da produtividade esperada (de 60 para 38,89) antes de entrar no prejuízo. É uma folga de segurança, e saber o tamanho dela ajuda a decidir quanto risco assumir.</p>
 
-            resultado.innerHTML = `Custo Total da Lavoura: R$ ${custoTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}<br>` +
-                                  `Custo Médio por Hectare: R$ ${custoPorHectare.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-        }
-    </script>
+  <h2>Cenários de preço e de produtividade</h2>
+  <p>Um único número é frágil. Veja como o resultado muda quando o preço cai, mantendo a produtividade de 60 unidades por hectare:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Preço por unidade</th><th>Receita</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>R$ 90</td><td>R$ 540.000</td><td>R$ 190.000</td></tr>
+      <tr><td>R$ 75</td><td>R$ 450.000</td><td>R$ 100.000</td></tr>
+      <tr><td>R$ 60</td><td>R$ 360.000</td><td>R$ 10.000</td></tr>
+      <tr><td>R$ 55</td><td>R$ 330.000</td><td>−R$ 20.000</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Agora, mantendo o preço de R$ 90 e reduzindo a produtividade:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Produtividade</th><th>Produção</th><th>Resultado</th></tr></thead>
+    <tbody>
+      <tr><td>60 por hectare</td><td>6.000</td><td>R$ 190.000</td></tr>
+      <tr><td>50 por hectare</td><td>5.000</td><td>R$ 100.000</td></tr>
+      <tr><td>40 por hectare</td><td>4.000</td><td>R$ 10.000</td></tr>
+      <tr><td>35 por hectare</td><td>3.500</td><td>−R$ 35.000</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Na prática, parte dos custos variáveis, como colheita e frete, acompanha a produção, então o resultado real em uma quebra de safra tende a ser um pouco diferente. A tabela serve para dimensionar o risco, e não como previsão.</p>
+
+  <h2>O efeito do tamanho da área</h2>
+  <p>Os custos fixos são diluídos quando a área cresce. Com os mesmos custos fixos de R$ 150.000, custo variável de R$ 2.000 por hectare e 60 unidades por hectare:</p>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Área</th><th>Custo total</th><th>Produção</th><th>Custo por unidade</th></tr></thead>
+    <tbody>
+      <tr><td>50 ha</td><td>R$ 250.000</td><td>3.000</td><td>R$ 83,33</td></tr>
+      <tr><td>100 ha</td><td>R$ 350.000</td><td>6.000</td><td>R$ 58,33</td></tr>
+      <tr><td>200 ha</td><td>R$ 550.000</td><td>12.000</td><td>R$ 45,83</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>O ganho de escala existe, mas não é automático. Em muitos casos, aumentar a área exige mais máquinas, mais mão de obra ou arrendamento, o que eleva os custos fixos em degraus. Antes de ampliar, refaça a conta com os custos reais da nova área.</p>
+
+  <h2>Como levantar os dados na prática</h2>
+  <ol>
+    <li><strong>Registre tudo por safra e, se possível, por talhão:</strong> notas fiscais de insumos, folha, combustível, frete e serviços.</li>
+    <li><strong>Separe fixos e variáveis</strong> e inclua a mão de obra da própria família, com um valor de referência.</li>
+    <li><strong>Calcule a depreciação.</strong> Uma máquina de R$ 400.000, com vida útil de 10 anos e valor residual de R$ 100.000, deprecia R$ 30.000 por ano ((400.000 − 100.000) ÷ 10).</li>
+    <li><strong>Meça a produtividade real,</strong> com pesagem na colheita, e use a média de várias safras em vez do melhor ano.</li>
+    <li><strong>Atualize a cada safra</strong> e compare o previsto com o realizado.</li>
+  </ol>
+
+  <h2>O que o custo por unidade revela</h2>
+  <p>Com o número em mãos, o produtor consegue comparar talhões e culturas, negociar arrendamento com base em dados, definir um preço-alvo de venda e avaliar se a lavoura suporta o custo de um financiamento. O mesmo exemplo é usado no guia de <a href="/agronegocio/fluxo-de-caixa-da-safra/">fluxo de caixa da safra</a>, que mostra quando o dinheiro sai e quando entra, e no de <a href="/agronegocio/plano-safra-como-funciona/">Plano Safra</a>, que ajuda a comparar o custo do crédito.</p>
+
+  <h2>Erros comuns</h2>
+  <ul>
+    <li>Ignorar a depreciação e a mão de obra própria, o que subestima o custo.</li>
+    <li>Usar a produtividade do melhor ano em vez da média.</li>
+    <li>Comparar custo por hectare sem olhar a produtividade.</li>
+    <li>Misturar despesas pessoais e da propriedade.</li>
+    <li>Esquecer juros, seguros e impostos.</li>
+  </ul>
+
+  <h2>Teste os seus números</h2>
+  <p>A <a href="/ferramentas/#custo-rural">calculadora de custo por unidade</a> usa a mesma lógica deste guia. Com os valores iniciais da ferramenta (100 hectares, R$ 150.000 de custos fixos, R$ 2.000 por hectare, 60 unidades por hectare e preço de R$ 90), o resultado é o do exemplo: custo total de R$ 350.000, custo por unidade de R$ 58,33 e produtividade mínima de 38,89 unidades por hectare. Troque pelos dados da sua propriedade.</p>
+
+  <h2>Fontes e referências</h2>
+  <ul>
+    <li>Companhia Nacional de Abastecimento (Conab): estudos e planilhas de custos de produção agrícola (<a href="https://www.conab.gov.br" rel="noopener">conab.gov.br</a>).</li>
+    <li>Embrapa: informações técnicas e sistemas de produção por cultura (<a href="https://www.embrapa.br" rel="noopener">embrapa.br</a>).</li>
+    <li>Ministério da Agricultura e Pecuária: política agrícola e Plano Safra (<a href="https://www.gov.br/agricultura" rel="noopener">gov.br/agricultura</a>).</li>
+    <li>IBGE: estatísticas de produção agrícola (<a href="https://www.ibge.gov.br" rel="noopener">ibge.gov.br</a>).</li>
+    <li>Cepea (Esalq/USP): indicadores de preços agropecuários (<a href="https://www.cepea.esalq.usp.br" rel="noopener">cepea.esalq.usp.br</a>).</li>
+  </ul>
+
+  <h2>Perguntas frequentes</h2>
+  <h3>Devo calcular o custo por hectare ou por unidade produzida?</h3>
+  <p>Os dois. O custo por hectare mostra quanto se investe na área, e o custo por unidade, como a saca, relaciona esse investimento à produtividade. Comparar lavouras só pelo custo por hectare pode esconder diferenças de rendimento.</p>
+  <h3>Preciso incluir o valor da terra própria no custo?</h3>
+  <p>Para uma análise completa, vale considerar o custo de oportunidade, que é quanto a terra e o capital próprio renderiam em outro uso, como o arrendamento. Ele não é um desembolso, mas ajuda a avaliar se a atividade compensa em relação a alternativas.</p>
+  <h3>Como estimar a produtividade de equilíbrio?</h3>
+  <p>Divida o custo total pelo preço de venda esperado multiplicado pela área. O resultado indica quantas unidades por hectare a lavoura precisa produzir para cobrir os custos naquele preço.</p>
+  <h3>Com que frequência devo recalcular o custo de produção?</h3>
+  <p>A cada safra e sempre que houver mudança relevante nos preços de insumos, no arrendamento, nos juros ou na produtividade esperada. Atualizar durante o ciclo ajuda a corrigir a rota antes da colheita.</p>
+
+  <div class="autor"><strong>Por Redação Pauta Financeira.</strong> Texto educativo, produzido a partir de fontes oficiais e revisado em 22/11/2026. Encontrou algum erro ou tem uma sugestão? Fale conosco pela página de <a href="/contato/">contato</a>. Saiba como produzimos os textos em <a href="/sobre/">Sobre</a>.</div>
+</article>
+</main>
+
+<footer>
+  <div class="w">
+    <p>© 2026 Pauta Financeira. Conteúdo educativo; não constitui recomendação de investimento, compra ou venda de ativos.</p>
+    <p>
+      <a href="/privacidade/">Privacidade</a>
+      <a href="/termos/">Termos e aviso financeiro</a>
+      <a href="/contato/">Contato</a>
+      <a href="#" id="pf-cookies">Gerenciar cookies</a>
+    </p>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookies" role="dialog" aria-label="Aviso de cookies">
+  <p>Usamos armazenamento local para lembrar a sua escolha. Saiba mais na <a href="/privacidade/">Política de Privacidade</a>.</p>
+  <button id="cookie-aceitar" class="ok">Aceitar</button>
+  <button id="cookie-recusar" class="nao">Recusar</button>
+</div>
+
+<script src="/script.js" defer></script>
 </body>
 </html>
